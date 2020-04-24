@@ -1,0 +1,13 @@
+tactician:
+  default_bus: command.create.item
+  commandbus:
+    command.create.item:
+      middleware:
+        - tactician.middleware.locking
+        - tactician.middleware.logger
+        - tactician.commandbus.command.create.item.middleware.command_handler
+
+    command.query.item:
+      middleware:
+        - tactician.middleware.logger
+        - tactician.commandbus.command.query.item.middleware.command_handler

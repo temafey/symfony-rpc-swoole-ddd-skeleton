@@ -1,0 +1,33 @@
+includes:
+	- vendor/phpstan/phpstan-mockery/extension.neon
+	- vendor/phpstan/phpstan-phpunit/extension.neon
+	- vendor/phpstan/phpstan-symfony/extension.neon
+
+parameters:
+	checkGenericClassInNonGenericObjectType: false
+	checkMissingIterableValueType: false
+	excludes_analyse:
+		- /app/src/Infrastructure/Migrations/*
+		- /app/src/Presentation/Cli/Command/*
+		- /app/tests/Unit/Preprocessor/*
+		- /app/tests/Unit/Mock/*
+	ignoreErrors:
+	    - '#Unsafe usage of new static\(\).#'
+	    - '#Parameter .* expects .*\\ValueObjectInterface given\.#'
+	    - '#Parameter .* expects MasterData\\Api\\RpcSkeleton\\Domain\\ValueObject\\.*, MicroModule\\ValueObject\\.* given\.#'
+	    - '#Method MasterData\\Api\\RpcSkeleton\\Domain\\Factory\\ValueObjectFactory.* should return MasterData\\Api\\RpcSkeleton\\Domain\\ValueObject\\.* but returns MicroModule\\ValueObject\\.*#'
+	    - '#Method .*::deserialize\(\) should return \$this\(.*\) but returns static\(.*\)\.#'
+	    - '#Strict comparison using === between 1 and float will always evaluate to false.#'
+	    - '#Call to an undefined method MasterData\\Api\\RpcSkeleton\\Domain\\Event\\ItemEvent::getId\(\).#'
+	    - '#Method.*create.*ValueObject.*Mock\(\) should return.*Mockery\\MockInterface but returns Mockery\\MockInterface.#'
+#	    - '#Method.*create.*Mock\(\).*return.*\&Mockery\\MockInterface.#'
+#	    - '#Call to an undefined method MasterData\\Api\\RpcSkeleton\\Tests\\Unit.*Test\:\:create.*Mock\(\).#'
+#	    - '#Method MasterData\\Api\\RpcSkeleton\\Tests\\Unit.*create.*Mock\(\) with return type void returns mixed but should not return anything\.#'
+#	    - '#PHPDoc tag \@return contains unresolvable type.#'
+	    - '#Parameter .* expects .*Mockery\\MockInterface.* given\.#'
+	    - '#Method MasterData\\Api\\RpcSkeleton\\Tests\\.* should return .* but returns Mockery\\MockInterface.*#'
+
+#	    - '#Call to an undefined method Mockery\\MockInterface.*#'
+#	    - '#Call to an undefined method Mockery\\Expectation::shouldReceive#'
+#	    - '#PHPDoc tag \@param for parameter \$.*Mock contains unresolvable type\.#'
+#	    - '#Call to static method PHPUnit\\Framework\\Assert\:\:assertInstanceOf\(\) with .* and .*ProgramWasNotUpdatedEvent will always evaluate to false.#'

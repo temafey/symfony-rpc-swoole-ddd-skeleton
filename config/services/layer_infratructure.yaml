@@ -1,0 +1,26 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: true
+
+  MicroModule\Base\Domain\Service\NormalizableServiceInterface:
+    class: MicroModule\MasterData\Application\Service\ItemResultDtoNormalizeService
+
+  Backend\Api\RpcSkeleton\Infrastructure\Repository\ItemStoreRepository:
+    autowire: true
+    arguments:
+      - '@Backend\Api\RpcSkeleton\Infrastructure\Repository\ItemEventSourcingStoreRepository'
+      - '@Broadway\EventStore\Dbal\DBALEventStore'
+      - '@MicroModule\Snapshotting\Snapshot\SnapshotRepository'
+      - '@MicroModule\Snapshotting\Snapshot\Trigger\EventCountTrigger'
+
+  Backend\Api\RpcSkeleton\Infrastructure\Repository\Storage\DBALReadModelStore:
+    arguments:
+      - '@doctrine.dbal.default_connection'
+      - 'items'
+      - 'uuid'
+
+  MicroModule\Snapshotting\Snapshot\Trigger\EventCountTrigger:
+    arguments:
+      - 20

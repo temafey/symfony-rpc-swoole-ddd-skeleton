@@ -1,0 +1,29 @@
+{
+    "timeout": 10,
+    "source": {
+        "directories": [
+            "src"
+        ],
+        "excludes": [
+            "config",
+            "src/Presentation"
+        ]
+    },
+    "logs": {
+        "text": "var/infection/text.log",
+        "summary": "var/infection/summary.log",
+        "debug": "var/infection/debug.log",
+        "perMutator": "var/per-mutator.md"
+    },
+    "tmpDir": "infection/temp",
+    "mutators": {
+        "@default": true
+    },
+    "phpUnit": {
+        "configDir": "/app"
+    },
+    "testFramework": "phpunit",
+    "bootstrap": "./tests/autoload.php",
+    "initialTestsPhpOptions": "-d zend_extension=xdebug.so",
+    "testFrameworkOptions": "-vvv"
+}

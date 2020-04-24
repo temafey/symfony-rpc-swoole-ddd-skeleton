@@ -1,0 +1,29 @@
+broadway:
+    event_store: Broadway\EventStore\InMemoryEventStore
+    saga:
+        enabled: true
+
+services:
+  Broadway\Saga\State\InMemoryRepository: ~
+  Broadway\EventStore\InMemoryEventStore: ~
+  Broadway\EventHandling\SimpleEventBus: ~
+
+  Broadway\Saga\Testing\TraceableSagaStateRepository:
+    public: true
+    arguments:
+      - '@Broadway\Saga\State\InMemoryRepository'
+
+  Broadway\EventStore\TraceableEventStore:
+    public: true
+    arguments:
+      - '@Broadway\EventStore\InMemoryEventStore'
+
+  Broadway\EventHandling\TraceableEventBus:
+    public: true
+    arguments:
+      - '@Broadway\EventHandling\SimpleEventBus'
+
+  Broadway\Saga\Testing\EventCollectorListener:
+    public: true
+    tags:
+      - { name: broadway.domain.event_listener }

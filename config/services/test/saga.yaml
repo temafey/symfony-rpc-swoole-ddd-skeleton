@@ -1,0 +1,11 @@
+services:
+  _defaults:
+    public: true
+
+  Broadway\Saga\Testing\EventCollectorListener:
+    public: true
+    tags:
+      - { name: broadway.domain.event_listener }
+
+  Broadway\EventStore\InMemoryEventStore: ~
+

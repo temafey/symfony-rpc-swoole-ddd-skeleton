@@ -1,0 +1,19 @@
+monolog:
+  handlers:
+    main:
+      type: stream
+      formatter: json_formatter
+      path: "%kernel.logs_dir%/%kernel.environment%.log"
+      level: debug
+      channels: ["!event"]
+
+    errors:
+      type: stream
+      formatter: json_formatter
+      path: "%kernel.logs_dir%/%kernel.environment%.error.log"
+      level: error
+
+services:
+  json_formatter:
+    class: Monolog\Formatter\JsonFormatter
+

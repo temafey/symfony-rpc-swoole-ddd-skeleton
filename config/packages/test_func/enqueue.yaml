@@ -1,0 +1,9 @@
+enqueue:
+  event:
+    transport: 'null:'
+    client:
+      traceable_producer: true
+  task:
+    transport: 'null:'
+    client:
+      traceable_producer: true

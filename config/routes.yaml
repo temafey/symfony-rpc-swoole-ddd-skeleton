@@ -1,0 +1,9 @@
+json-rpc-endpoint:
+  resource: '@JsonRpcHttpServerBundle/Resources/config/routing/endpoint.xml'
+
+json-rpc-endpoint-doc:
+  resource: '@JsonRpcHttpServerDocBundle/Resources/config/routing/endpoint.xml'
+
+_swagger-ui:
+  resource: '@HBSwaggerUiBundle/Resources/config/routing.yml'
+  prefix: /docs

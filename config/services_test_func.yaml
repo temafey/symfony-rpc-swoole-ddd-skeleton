@@ -1,0 +1,5 @@
+services:
+  _defaults:
+    public: true
+
+  Enqueue\Client\ProducerInterface: '@enqueue.client.event.traceable_producer'

@@ -1,0 +1,4 @@
+broadway:
+  event_store: Broadway\EventStore\InMemoryEventStore
+  saga:
+    enabled: false

@@ -1,0 +1,27 @@
+services:
+  MicroModule\Saga\Storage\DBALSagaRepository:
+    public: true
+    arguments:
+      - '@doctrine.dbal.default_connection'
+      - 'sagas'
+
+  Broadway\EventStore\Dbal\DBALEventStore:
+    public: true
+    arguments:
+      - '@doctrine.dbal.default_connection'
+      - '@broadway.serializer.payload'
+      - '@broadway.serializer.metadata'
+      - 'events'
+      - false
+      - '@broadway.uuid.converter'
+
+  ### Saga
+
+  Backend\Api\RpcSkeleton\Application\Saga\ItemSaga:
+    arguments:
+      - '@tactician.commandbus.command.create.item'
+      - '@Backend\Api\RpcSkeleton\Domain\Factory\CommandFactory'
+    public: true
+    tags:
+      - { name: broadway.saga, type: api.item }
+

@@ -1,0 +1,38 @@
+services:
+  GuzzleHttp\Client:
+    arguments:
+      - handler: '@guzzle.handler-stack'
+
+  guzzle.handler-stack:
+    class: GuzzleHttp\HandlerStack
+    factory: [ GuzzleHttp\HandlerStack, 'create' ]
+    calls:
+      - [ 'push', [ '@guzzle.retry.middleware', 'retry'] ]
+      - [ 'push', [ '@guzzle.rewind.middleware', 'rewind'] ]
+      - [ 'push', [ '@guzzle.log.middleware', 'log'] ]
+
+  guzzle.retry.middleware:
+    public: true
+    class: GuzzleRetry\GuzzleRetryMiddleware
+    factory: [ GuzzleRetry\GuzzleRetryMiddleware, factory ]
+    arguments:
+      - retry_on_timeout: true
+        max_retry_attempts: 3
+        retry_on_status: [500, 503, 504]
+
+
+  guzzle.log.middleware:
+    class: GuzzleHttp\Middleware
+    factory: [ GuzzleHttp\Middleware, log ]
+    arguments:
+      - '@guzzle.logger'
+      - '@GuzzleHttp\MessageFormatter'
+
+  guzzle.logger:
+    class: Monolog\Logger
+    arguments:
+      - 'guzzle.logger'
+
+  GuzzleHttp\MessageFormatter:
+    arguments:
+      - '{method}:{uri} {req_body} - {code} {error}'

@@ -1,0 +1,5 @@
+framework:
+    secret: '%app.secret%'
+    php_errors:
+        log: true
+    trusted_hosts: ["localhost"]

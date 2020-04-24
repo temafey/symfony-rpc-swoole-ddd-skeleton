@@ -1,0 +1,19 @@
+services:
+  MicroModule\Snapshotting\Snapshot\Storage\SnapshotStoreInterface:
+    class: MicroModule\Snapshotting\Snapshot\Storage\DBALSnapshotStore
+    public: true
+    arguments:
+      - '@doctrine.dbal.default_connection'
+      - '@broadway.serializer.payload'
+      - '@broadway.serializer.metadata'
+      - 'snapshots'
+      - false
+      - '@broadway.uuid.converter'
+
+  MicroModule\Snapshotting\Snapshot\SnapshotRepository:
+    arguments:
+      - '@MicroModule\Snapshotting\Snapshot\Storage\SnapshotStoreInterface'
+      - 'Backend\Api\RpcSkeleton\Domain\Entity\ItemEntity'
+      - '@MicroModule\Snapshotting\EventSourcing\PublicConstructorAggregateFactory'
+
+  MicroModule\Snapshotting\EventSourcing\PublicConstructorAggregateFactory: ~

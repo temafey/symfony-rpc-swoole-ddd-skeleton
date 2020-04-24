@@ -1,0 +1,15 @@
+monolog:
+  handlers:
+    console:
+      type:   console
+      process_psr_3_messages: false
+      formatter: 'monolog.formatter.line'
+      channels: ["!event", "!doctrine"]
+      level: debug
+      verbosity_levels:
+        VERBOSITY_NORMAL: DEBUG
+
+services:
+    json_formatter:
+        class: Monolog\Formatter\JsonFormatter
+

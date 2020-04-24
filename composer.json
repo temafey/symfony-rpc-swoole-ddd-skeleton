@@ -1,0 +1,133 @@
+{
+    "name": "backend/symfony-rpc-swoole-ddd-skeleton",
+    "description": "RPC api microservice",
+    "type": "microservice",
+    "license": ["proprietary"],
+    "require": {
+        "php": "^7.4",
+        "ext-ctype": "*",
+        "ext-iconv": "*",
+        "ext-json": "*",
+        "ext-pdo": "*",
+        "ext-redis": "*",
+        "micro-module/base": "^0.4",
+        "micro-module/command-bus": "^0.4",
+        "micro-module/saga-bundle": "^0.4",
+        "micro-module/snapshotting": "^0.4",
+        "micro-module/task-bundle": "^0.4",
+        "micro-module/value-object": "^0.4",
+        "micro-module/broadway-saga": "^0.4",
+        "beberlei/assert": "^3.2",
+        "broadway/broadway": "^2.3",
+        "broadway/broadway-bundle": "^0.5",
+        "broadway/event-store-dbal": "^0.5",
+        "enqueue/amqp-lib": "^0.10",
+        "enqueue/async-command": "^0.10",
+        "enqueue/enqueue-bundle": "^0.10",
+        "enqueue/fs": "^0.10",
+        "enqueue/job-queue": "^0.10",
+        "guzzlehttp/guzzle": "^6.5",
+        "guzzlehttp/psr7": "^1.6",
+        "harmbandstra/swagger-ui-bundle": "^4.2",
+        "http-interop/http-factory-discovery": "^1.5",
+        "http-interop/http-factory-guzzle": "^1.0",
+        "k911/swoole-bundle": "^0.7",
+        "league/tactician-bundle": "^1.2",
+        "league/tactician-command-events": "^0.6",
+        "marc-mabe/php-enum": "^4.2",
+        "myclabs/deep-copy": "^1.9",
+        "php-http/guzzle6-adapter": "^2.0",
+        "psr/http-client": "^1.0",
+        "psr/http-factory": "^1.0",
+        "psr/http-message": "^1.0",
+        "ramsey/uuid": "^3.9",
+        "ramsey/uuid-doctrine": "^1.6",
+        "sentry/sentry-symfony": "^3.4",
+        "symfony/asset": "^5.0",
+        "symfony/console": "^5.0",
+        "symfony/dotenv": "^5.0",
+        "symfony/flex": "^1.6",
+        "symfony/monolog-bundle": "^3.5",
+        "symfony/orm-pack": "^1.0",
+        "symfony/stopwatch": "^5.0",
+        "symfony/validator": "^5.0",
+        "symfony/yaml": "^5.0",
+        "yoanm/symfony-jsonrpc-http-server": "^3.0",
+        "yoanm/symfony-jsonrpc-params-validator": "^2.0",
+        "yoanm/symfony-jsonrpc-http-server-doc": "^1.0",
+        "yoanm/symfony-jsonrpc-http-server-openapi-doc": "^1.0",
+        "yoanm/symfony-jsonrpc-params-sf-constraints-doc": "^1.0"
+    },
+    "require-dev": {
+        "darkghosthunter/preloader": "^2.0",
+        "dg/bypass-finals": "^1.1",
+        "enqueue/null": "^0.10",
+        "fzaninotto/faker": "^1.9",
+        "infection/infection": "^0.15",
+        "php-parallel-lint/php-console-highlighter": "^0.4",
+        "php-parallel-lint/php-parallel-lint": "^1.1",
+        "mockery/mockery": "^1.3",
+        "nikic/php-parser": "^4.3",
+        "phan/phan": "^2.6",
+        "phpmd/phpmd": "^2.8",
+        "phpstan/phpstan": "^0.12",
+        "phpstan/phpstan-mockery": "^0.12",
+        "phpstan/phpstan-phpunit": "^0.12",
+        "phpstan/phpstan-symfony": "^0.12",
+        "phpunit/phpunit": "^8.5 || ^9.0",
+        "roave/no-leaks": "^1.1",
+        "sensiolabs-de/deptrac-shim": "^0.6",
+        "sensiolabs/security-checker": "^6.0.3",
+        "symfony/browser-kit": "^5.0",
+        "symfony/phpunit-bridge": "^5.0",
+        "symplify/easy-coding-standard": "^7.2",
+        "vimeo/psalm": "^3.10"
+    },
+    "config": {
+        "preferred-install": {
+            "*": "dist"
+        },
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "Backend\\Api\\RpcSkeleton\\": "src"
+        },
+        "files": ["bootstrap/const.php", "bootstrap/helper.php"]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Backend\\Api\\RpcSkeleton\\Tests\\DataProvider\\": "tests/DataProvider",
+            "Backend\\Api\\RpcSkeleton\\Tests\\Helper\\": "tests/Helper",
+            "Backend\\Api\\RpcSkeleton\\Tests\\Unit\\": "tests/Unit",
+            "Backend\\Api\\RpcSkeleton\\Tests\\Integration\\": "tests/Integration",
+            "Backend\\Api\\RpcSkeleton\\Tests\\Fake\\": "tests/Fake"
+        }
+    },
+    "replace": {
+        "symfony/polyfill-iconv": "*"
+    },
+    "scripts": {
+        "auto-scripts": {
+            "cache:clear": "symfony-cmd",
+            "assets:install %PUBLIC_DIR%": "symfony-cmd"
+        },
+        "post-install-cmd": [
+            "HarmBandstra\\SwaggerUiBundle\\Composer\\ScriptHandler::linkAssets",
+            "@auto-scripts"
+        ],
+        "post-update-cmd": [
+            "HarmBandstra\\SwaggerUiBundle\\Composer\\ScriptHandler::linkAssets",
+            "@auto-scripts"
+        ]
+    },
+    "conflict": {
+        "symfony/symfony": "*"
+    },
+    "extra": {
+        "symfony": {
+            "id": "*",
+            "allow-contrib": false
+        }
+    }
+}

@@ -1,0 +1,10 @@
+services:
+  MicroModule\Base\Infrastructure\Service\Monolog\CustomTagProcessor:
+    autoconfigure: true
+    arguments:
+      - "%app.env%"
+      - "%app.version%"
+      - { afm_name: '%app.service_name%' }
+      - [ 'uuid' ]
+    tags:
+      - { name: monolog.processor, handler: sentry }

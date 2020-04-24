@@ -1,0 +1,12 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: false
+    public: false
+
+  tactician.middleware.logger:
+    class: MicroModule\CommandBus\Middleware\LoggerMiddleware
+    arguments:
+      - '@tactician.logger.class_properties_formatter'
+      - '@logger'
+

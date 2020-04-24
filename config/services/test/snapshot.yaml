@@ -1,0 +1,9 @@
+services:
+  MicroModule\Snapshotting\Snapshot\Storage\SnapshotStoreInterface:
+    class: MicroModule\Snapshotting\Snapshot\Storage\InMemorySnapshotStore
+    public: true
+    arguments:
+      - '@broadway.serializer.payload'
+      - '@broadway.serializer.metadata'
+      - false
+      - '@broadway.uuid.converter'

@@ -1,0 +1,4 @@
+hb_swagger_ui:
+  directory: "http://127.0.0.1:9501"
+  files:
+    - "/doc/openapi.json"

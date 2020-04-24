@@ -1,0 +1,35 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: true
+
+  Backend\Api\RpcSkeleton\Application\QueryHandler\FetchOneHandler:
+    arguments:
+      - '@Backend\Api\RpcSkeleton\Infrastructure\Repository\QueryRepository'
+      - '@Backend\Api\RpcSkeleton\Application\Service\ItemAssembler'
+    tags:
+      - { name: tactician.handler, typehints: true, bus: command.query.item }
+
+  Backend\Api\RpcSkeleton\Application\QueryHandler\FindLiteHandler:
+    arguments:
+      - '@Backend\Api\RpcSkeleton\Infrastructure\Repository\QueryLiteRepository'
+    tags:
+      - { name: tactician.handler, typehints: true, bus: command.query.item }
+
+  Backend\Api\RpcSkeleton\Application\QueryHandler\FindHandler:
+    arguments:
+      - '@Backend\Api\RpcSkeleton\Infrastructure\Repository\QueryRepository'
+      - '@Backend\Api\RpcSkeleton\Application\Service\ItemAssembler'
+    tags:
+      - { name: tactician.handler, typehints: true, bus: command.query.item }
+
+  Backend\Api\RpcSkeleton\Application\Projector\ItemProjector:
+    arguments:
+      - '@Backend\Api\RpcSkeleton\Infrastructure\Repository\CommandRepository'
+      - '@Backend\Api\RpcSkeleton\Infrastructure\Repository\QueryRepository'
+      - '@Backend\Api\RpcSkeleton\Domain\Factory\ItemFactory'
+      - '@broadway.event_handling.event_bus'
+      - '@Backend\Api\RpcSkeleton\Domain\Factory\EventFactory'
+    tags:
+      - { name: broadway.domain.event_listener }

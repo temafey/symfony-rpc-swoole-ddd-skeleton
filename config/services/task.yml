@@ -1,0 +1,16 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: false
+    public: false
+
+  MicroModule\Task\Application\Processor\JobCommandBusProcessor:
+    arguments:
+      - '@Enqueue\JobQueue\JobRunner'
+      - '@tactician.commandbus.command.create.item'
+      - '@Backend\Api\RpcSkeleton\Domain\Factory\CommandFactory'
+      - '@broadway.event_dispatcher'
+    calls:
+      - [setLogger, ['@logger']]
+    tags:
+      - { name: 'enqueue.command_subscriber', client: 'task' }

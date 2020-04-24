@@ -1,0 +1,39 @@
+{
+  "extensions": [
+    "php"
+  ],
+  "files": [
+    "src/*",
+    "config/",
+    "bootstrap/const.php",
+    "bootstrap/helpers.php",
+    "src/Application/*/*",
+    "src/Domain/*/*",
+    "src/Infrastructure/Repository/*",
+    "src/Infrastructure/Repository/Storage/*"
+  ],
+  "packages": {
+    "micro-module/*": {
+      "files": [
+        "*/src/*"
+      ]
+    },
+    "micro/*": {
+      "files": [
+        "*/src/*"
+      ]
+    },
+    "enqueue/*": true,
+    "broadway/*": {
+      "files": [
+        "*/src/*"
+      ]
+    },
+    "league/*": {
+      "files": [
+        "*/src/*"
+      ]
+    }
+  },
+  "output": "preload-compiled.php"
+}

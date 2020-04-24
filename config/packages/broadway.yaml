@@ -1,0 +1,6 @@
+broadway:
+  event_store: Broadway\EventStore\Dbal\DBALEventStore
+
+  saga:
+    enabled: true
+    state_repository: MicroModule\Saga\Storage\DBALSagaRepository

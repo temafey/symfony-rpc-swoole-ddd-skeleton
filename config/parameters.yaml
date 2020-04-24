@@ -1,0 +1,48 @@
+parameters:
+  app.env: '%env(APP_ENV)%'
+  app.secret: '%env(APP_SECRET)%'
+  app.service_name: '%env(CI_SERVICE_NAME)%'
+  app.version: '%env(APP_VERSION)%'
+
+  sentry.dsn: '%env(APISKELETON_SENTRY_DSN)%'
+
+  slack.token: '%env(APISKELETON_SLACK_TOKEN)%'
+  slack.channel: '%env(APISKELETON_SLACK_ERROR_CHANNEL)%'
+  slack.bot: '%env(APISKELETON_SLACK_BOT_NAME)%'
+
+  redis.host: '%env(APISKELETON_REDIS_HOST)%'
+  redis.port: '%env(APISKELETON_REDIS_PORT)%'
+
+  enqueue.amqp.host:  '%env(APISKELETON_RABBITMQ_HOST)%'
+  enqueue.amqp.port:  '%env(APISKELETON_RABBITMQ_PORT)%'
+  enqueue.amqp.user:  '%env(APISKELETON_RABBITMQ_USER)%'
+  enqueue.amqp.pass:  '%env(APISKELETON_RABBITMQ_PASS)%'
+  enqueue.amqp.vhost: '%env(APISKELETON_RABBITMQ_VHOST)%'
+  enqueue.client.prefix: 'md.%app.service_name%'
+  enqueue.client.app:    'item'
+
+  enqueue.task.client.app: 'task'
+  enqueue.event.client.app: 'event'
+  enqueue.taskevent.client.app: 'task.event'
+
+  affiliate.base-url: '%env(APISKELETON_API_BASE_URL)%'
+  affiliate.user-id:  '%env(APISKELETON_API_USER_ID)%'
+  affiliate.api-key:  '%env(APISKELETON_API_API_KEY)%'
+
+  alerting.delaytime:     '%env(APISKELETON_ALERTING_DELAY_TIME)%'
+  alerting.adapter.type:  alerta
+  alerting.adapter.host:  '%env(APISKELETON_ALERTING_ALERTA_HOST)%'
+  alerting.adapter.port:  '%env(APISKELETON_ALERTING_ALERTA_PORT)%'
+  alerting.adapter.token: '%env(APISKELETON_ALERTING_ALERTA_TOKEN)%'
+
+  db.postgresql.host:       '%env(APISKELETON_POSTGRESQL_HOST)%'
+  db.postgresql.port:       "%env(APISKELETON_POSTGRESQL_PORT)%"
+  db.postgresql.dbname:     '%env(APISKELETON_POSTGRESQL_DB)%'
+  db.postgresql.user:       '%env(APISKELETON_POSTGRESQL_USER)%'
+  db.postgresql.password:   '%env(APISKELETON_POSTGRESQL_PASS)%'
+
+  statistic.server.host: '%env(APISKELETON_STATSD_SERVER_HOST)%'
+  statistic.server.port: '%env(APISKELETON_STATSD_SERVER_PORT)%'
+  statistic.server.protocol: 'udp'
+  statistic.monitoring.prefix: '%env(APISKELETON_STATSD_ENV)%.dg.%app.service_name%'
+  statistic.monitoring.butch-size: 1

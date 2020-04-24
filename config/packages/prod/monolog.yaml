@@ -1,0 +1,27 @@
+monolog:
+    handlers:
+        main:
+            type: fingers_crossed
+            action_level: error
+            handler: nested
+            excluded_404s:
+                # regex: exclude all 404 errors from the logs
+                - ^/
+        nested:
+            type: stream
+            formatter: json_formatter
+            path: "%kernel.logs_dir%/%kernel.environment%.log"
+            level: warning
+
+        sentry:
+            type:  raven
+            dsn:   "%sentry.dsn%"
+            level: warning
+
+services:
+  json_formatter:
+    class: Monolog\Formatter\JsonFormatter
+
+  Symfony\Bridge\Monolog\Processor\WebProcessor:
+    tags:
+      - { name: kernel.event_listener, event: kernel.request }

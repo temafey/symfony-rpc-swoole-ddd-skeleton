@@ -1,0 +1,19 @@
+enqueue:
+  task:
+    transport: 'amqp://%enqueue.amqp.user%:%enqueue.amqp.pass%@%enqueue.amqp.host%:%enqueue.amqp.port%/%enqueue.amqp.vhost%'
+    client:
+      prefix: '%enqueue.client.prefix%.%app.service_name%'
+      app_name: ''
+      default_queue: '%enqueue.task.client.app%'
+      router_topic:  '%enqueue.task.client.app%'
+      router_queue:  '%enqueue.task.client.app%'
+    job: true
+    
+  taskevent:
+    transport: 'amqp://%enqueue.amqp.user%:%enqueue.amqp.pass%@%enqueue.amqp.host%:%enqueue.amqp.port%/%enqueue.amqp.vhost%'
+    client:
+      prefix: '%enqueue.client.prefix%.%app.service_name%'
+      app_name: ''
+      default_queue: '%enqueue.taskevent.client.app%'
+      router_topic:  '%enqueue.taskevent.client.app%'
+      router_queue:  '%enqueue.taskevent.client.app%'

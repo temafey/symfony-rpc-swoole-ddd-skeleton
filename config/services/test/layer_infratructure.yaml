@@ -1,0 +1,10 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: true
+
+  Backend\Api\RpcSkeleton\Infrastructure\Repository\Storage\DBALReadModelStore:
+    class: Backend\Api\RpcSkeleton\Infrastructure\Repository\Storage\InMemoryReadModelStore
+    arguments:
+      - 'uuid'

@@ -1,0 +1,9 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: true
+
+  Backend\Api\RpcSkeleton\Presentation\Cli\Command\:
+    resource: '../../src/Presentation/Cli/Command'
+

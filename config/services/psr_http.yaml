@@ -1,0 +1,10 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+
+  ### Http PSR-7 interfaces ###
+  Psr\Http\Client\ClientInterface:
+    factory: 'Http\Factory\Discovery\HttpClient::client'
+  Psr\Http\Message\RequestFactoryInterface:
+    factory: 'Http\Factory\Discovery\HttpFactory::requestFactory'

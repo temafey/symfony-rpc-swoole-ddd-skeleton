@@ -1,0 +1,63 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Backend\Api\RpcSkeleton\Domain\Command;
+
+use MicroModule\ValueObject\Identity\UUID as ProcessUuid;
+use Backend\Api\RpcSkeleton\Domain\ValueObject\Id;
+use Backend\Api\RpcSkeleton\Domain\ValueObject\Uuid;
+
+/**
+ * Class ItemAddIdCommand.
+ */
+class ItemAddIdCommand extends ItemCommand
+{
+    /**
+     * Item primary key value.
+     *
+     * @var Uuid
+     */
+    private Uuid $uuid;
+
+    /**
+     * Item unique integer identifier.
+     *
+     * @var Id
+     */
+    private Id $id;
+
+    /**
+     * InitItemCommand constructor.
+     *
+     * @param ProcessUuid $processUuid
+     * @param Uuid        $uuid
+     * @param Id          $id
+     */
+    public function __construct(ProcessUuid $processUuid, Uuid $uuid, Id $id)
+    {
+        parent::__construct($processUuid);
+        $this->uuid = $uuid;
+        $this->id = $id;
+    }
+
+    /**
+     * Return Uuid object.
+     *
+     * @return Uuid
+     */
+    public function getItemUuid(): Uuid
+    {
+        return $this->uuid;
+    }
+
+    /**
+     * Return Id value object.
+     *
+     * @return Id
+     */
+    public function getId(): Id
+    {
+        return $this->id;
+    }
+}
