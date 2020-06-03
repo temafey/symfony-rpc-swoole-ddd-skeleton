@@ -42,15 +42,6 @@ Enter in php container:
 
 `make php-shell`
 
-Make release commit
-
-`make release`
-
-Make conventional commit,
-read specs https://www.conventionalcommits.org/en/v1.0.0-beta.2
-
-`make commit`
-
 Watch containers logs
 
 `make logs`
