@@ -22,5 +22,4 @@ class AbstractRpcTestCase extends WebTestCase
     {
         return self::$container->get($serviceId);
     }
-
 }

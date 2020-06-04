@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Backend\Api\RpcSkeleton\Tests\Unit\Domain\ValueObject;
 
-use MicroModule\ValueObject\Number\Integer;
-use MicroModule\ValueObject\Number\Real;
 use Backend\Api\RpcSkeleton\Domain\ValueObject\ParentId;
 use Backend\Api\RpcSkeleton\Tests\Unit\Mock\Domain\ValueObjectMockHelper;
 use Backend\Api\RpcSkeleton\Tests\Unit\UnitTestCase;
+use MicroModule\ValueObject\Number\Integer;
+use MicroModule\ValueObject\Number\Real;
 use TypeError;
 
 /**

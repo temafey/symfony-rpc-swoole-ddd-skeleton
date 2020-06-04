@@ -4,14 +4,14 @@ declare(strict_types=1);
 
 namespace Backend\Api\RpcSkeleton\Tests\Unit\Application\Saga;
 
-use Broadway\Saga\State;
 use Backend\Api\RpcSkeleton\Application\Saga\ItemSaga;
 use Backend\Api\RpcSkeleton\Tests\Unit\Mock\Domain\EventMockHelper;
 use Backend\Api\RpcSkeleton\Tests\Unit\Mock\Domain\ValueObjectMockHelper;
-use Backend\Api\RpcSkeleton\Tests\Unit\Mock\Vendor\MicroModule\BaseVendorMockHelper;
 use Backend\Api\RpcSkeleton\Tests\Unit\Mock\Vendor\Broadway\SagaVendorMockHelper;
 use Backend\Api\RpcSkeleton\Tests\Unit\Mock\Vendor\League\TacticianVendorMockHelper;
+use Backend\Api\RpcSkeleton\Tests\Unit\Mock\Vendor\MicroModule\BaseVendorMockHelper;
 use Backend\Api\RpcSkeleton\Tests\Unit\UnitTestCase;
+use Broadway\Saga\State;
 
 /**
  * Test for class ItemSaga.

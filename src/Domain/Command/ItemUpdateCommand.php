@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Backend\Api\RpcSkeleton\Domain\Command;
 
-use MicroModule\ValueObject\Identity\UUID as ProcessUuid;
 use Backend\Api\RpcSkeleton\Domain\ValueObject\Item;
 use Backend\Api\RpcSkeleton\Domain\ValueObject\Uuid;
+use MicroModule\ValueObject\Identity\UUID as ProcessUuid;
 
 /**
  * Class ItemUpdateCommand.

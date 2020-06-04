@@ -35,7 +35,7 @@ class RpcMethodDataProvider
                     'jsonrpc' => '2.0',
                     'id' => 1,
                     'result' => 'pong',
-                ]
+                ],
             ],
         ];
     }
@@ -76,7 +76,7 @@ class RpcMethodDataProvider
                     'name' => 'test2',
                     'url' => 'http://test2.com',
                     'status' => 1,
-                ]
+                ],
             ],
         ];
     }
@@ -100,7 +100,7 @@ class RpcMethodDataProvider
                     'method' => 'update',
                     'params' => [
                         'version' => '0.0.1',
-                        'uuid'=> '92feaa6f-8b42-433a-b7a4-93ec2fb4ace3',
+                        'uuid' => '92feaa6f-8b42-433a-b7a4-93ec2fb4ace3',
                         'parentId' => 1,
                         'name' => 'test2',
                         'url' => 'http://test2.com',
@@ -120,11 +120,12 @@ class RpcMethodDataProvider
                         'name' => 'test2',
                         'url' => 'http://test2.com',
                         'status' => 1,
-                    ]
-                ]
+                    ],
+                ],
             ],
         ];
     }
+
     /**
      * Return http request params fixture.
      *
@@ -144,7 +145,7 @@ class RpcMethodDataProvider
                     'method' => 'delete',
                     'params' => [
                         'version' => '0.0.1',
-                        'uuid'=> '92feaa6f-8b42-433a-b7a4-93ec2fb4ace3',
+                        'uuid' => '92feaa6f-8b42-433a-b7a4-93ec2fb4ace3',
                     ],
                     'id' => 2,
                 ],
@@ -154,8 +155,8 @@ class RpcMethodDataProvider
                     'result' => true,
                 ],
                 'expectedCommandParams' => [
-                    1 => '92feaa6f-8b42-433a-b7a4-93ec2fb4ace3'
-                ]
+                    1 => '92feaa6f-8b42-433a-b7a4-93ec2fb4ace3',
+                ],
             ],
         ];
     }

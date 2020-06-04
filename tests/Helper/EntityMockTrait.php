@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Backend\Api\RpcSkeleton\Tests\Helper;
 
-use MicroModule\ValueObject\Identity\UUID as ValueObjectUUID;
 use Backend\Api\RpcSkeleton\Domain\Entity\ItemEntity;
 use Backend\Api\RpcSkeleton\Domain\Factory\ItemFactory;
 use Backend\Api\RpcSkeleton\Domain\ValueObject\CreatedAt;
@@ -13,6 +12,7 @@ use Backend\Api\RpcSkeleton\Domain\ValueObject\Name;
 use Backend\Api\RpcSkeleton\Domain\ValueObject\ParentId;
 use Backend\Api\RpcSkeleton\Domain\ValueObject\UpdatedAt;
 use Backend\Api\RpcSkeleton\Domain\ValueObject\Url;
+use MicroModule\ValueObject\Identity\UUID as ValueObjectUUID;
 use Mockery;
 use Mockery\MockInterface;
 

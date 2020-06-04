@@ -317,7 +317,7 @@ class StatsdSagaEventListenerDataProvider
                             'getTraceAsString' => 'minima',
                         ],
                         'getParentExceptionContext' => 'Aliquid libero aperiam laudantium nisi repellat voluptas dolores. Nihil facere optio voluptas occaecati itaque enim. Culpa corporis ut est quis delectus vel dolore.',
-                        'className' => 'MasterData\\Api\\RpcSkeleton\\Infrastructure\\EventListener\\StatsdSagaEventListener',
+                        'className' => 'Backend\\\Api\\RpcSkeleton\\Infrastructure\\EventListener\\StatsdSagaEventListener',
                     ],
                     'LoggerInterface' => [
                         'emergency' => null,
@@ -357,7 +357,7 @@ class StatsdSagaEventListenerDataProvider
                             'getTraceAsString' => 0,
                         ],
                         'getParentExceptionContext' => 0,
-                        'className' => 'MasterData\\Api\\RpcSkeleton\\Infrastructure\\EventListener\\StatsdSagaEventListener',
+                        'className' => 'Backend\\\Api\\RpcSkeleton\\Infrastructure\\EventListener\\StatsdSagaEventListener',
                     ],
                     'LoggerInterface' => [
                         'times' => 0,
@@ -414,7 +414,7 @@ class StatsdSagaEventListenerDataProvider
                             'getTraceAsString' => 'et',
                         ],
                         'getParentExceptionContext' => 'Aut consectetur necessitatibus voluptatem rerum. Autem qui ut beatae maiores sint commodi error. Qui quis rerum numquam dolor.',
-                        'className' => 'MasterData\\Api\\RpcSkeleton\\Infrastructure\\EventListener\\StatsdSagaEventListener',
+                        'className' => 'Backend\\\Api\\RpcSkeleton\\Infrastructure\\EventListener\\StatsdSagaEventListener',
                     ],
                     'message' => 'dolorem',
                     'level' => 2,
@@ -446,7 +446,7 @@ class StatsdSagaEventListenerDataProvider
                             'getTraceAsString' => 0,
                         ],
                         'getParentExceptionContext' => 0,
-                        'className' => 'MasterData\\Api\\RpcSkeleton\\Infrastructure\\EventListener\\StatsdSagaEventListener',
+                        'className' => 'Backend\\\Api\\RpcSkeleton\\Infrastructure\\EventListener\\StatsdSagaEventListener',
                     ],
                 ],
             ],
@@ -491,7 +491,7 @@ class StatsdSagaEventListenerDataProvider
                             'getTraceAsString' => 'et',
                         ],
                         'getParentExceptionContext' => 'Nostrum quia blanditiis itaque ut voluptatem. Sit veniam ipsam nostrum hic quia. Delectus fugiat quas provident repellat culpa quae perspiciatis accusantium.',
-                        'className' => 'MasterData\\Api\\RpcSkeleton\\Infrastructure\\EventListener\\StatsdSagaEventListener',
+                        'className' => 'Backend\\\Api\\RpcSkeleton\\Infrastructure\\EventListener\\StatsdSagaEventListener',
                     ],
                     'Throwable' => [
                         'getMessage' => 'voluptate',
@@ -531,7 +531,7 @@ class StatsdSagaEventListenerDataProvider
                             'getTraceAsString' => 0,
                         ],
                         'getParentExceptionContext' => 0,
-                        'className' => 'MasterData\\Api\\RpcSkeleton\\Infrastructure\\EventListener\\StatsdSagaEventListener',
+                        'className' => 'Backend\\\Api\\RpcSkeleton\\Infrastructure\\EventListener\\StatsdSagaEventListener',
                     ],
                     'Throwable' => [
                         'times' => 0,

@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Backend\Api\RpcSkeleton\Tests\Unit\DataProvider\Domain\ValueObject;
 
-use Backend\Api\RpcSkeleton\Application\Dto\ItemDto;
 use stdClass;
 
 /**

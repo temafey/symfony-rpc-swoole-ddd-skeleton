@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Backend\Api\RpcSkeleton\Tests\Integration\Presentation\Cli;
 
+use Backend\Api\RpcSkeleton\Application\Factory\CommandFactory;
 use Enqueue\Client\TraceableProducer;
 use Exception;
 use League\Tactician\CommandBus;
-use Backend\Api\RpcSkeleton\Domain\Factory\CommandFactory;
 
 /**
  * Class ResultMasterData.
@@ -23,7 +23,7 @@ class QueryCommandTest extends AbstractConsoleTestCase
     }
 
     /**
-     * test
+     * test.
      *
      * @group        integration
      *
@@ -45,7 +45,7 @@ class QueryCommandTest extends AbstractConsoleTestCase
      */
     private function getCommandFactory(): CommandFactory
     {
-        return static::$kernel->getContainer()->get(CommandFactory::class);
+        return $this->service(CommandFactory::class);
     }
 
     /**

@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Backend\Api\RpcSkeleton\Domain\Command;
 
-use MicroModule\ValueObject\Identity\UUID;
 use Backend\Api\RpcSkeleton\Domain\ValueObject\Item;
+use MicroModule\ValueObject\Identity\UUID;
 
 /**
  * Class ItemCreateTaskCommand.

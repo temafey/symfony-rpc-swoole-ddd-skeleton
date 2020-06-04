@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Backend\Api\RpcSkeleton\Presentation\Rpc;
 
+use Backend\Api\RpcSkeleton\Application\Factory\CommandFactory;
 use Exception;
 use League\Tactician\CommandBus;
-use Backend\Api\RpcSkeleton\Domain\Factory\CommandFactory;
 use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\Constraints\Choice;
 use Symfony\Component\Validator\Constraints\Collection;
@@ -79,6 +79,9 @@ class FindMethod implements JsonRpcMethodInterface
     public function getParamsConstraint(): Constraint
     {
         return new Collection(['fields' => [
+            'id' => new Optional([
+                new Positive(),
+            ]),
             'parentId' => new Optional([
                 new Positive(),
             ]),
@@ -133,6 +136,13 @@ class FindMethod implements JsonRpcMethodInterface
     {
         $response = new ObjectDoc();
         $response->setNullable(false);
+
+        $response->addSibling(
+            (new NumberDoc())
+                ->setNullable(false)
+                ->setDescription('Id item')
+                ->setName('id')
+        );
 
         $response->addSibling(
             (new NumberDoc())

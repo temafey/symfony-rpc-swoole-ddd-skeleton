@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Backend\Api\RpcSkeleton\Tests\Unit\DataProvider\Domain\Query;
+namespace Backend\Api\RpcSkeleton\Tests\Unit\DataProvider\Application\QueryHandler;
 
 /**
  * DataProvider for class {testClassName}.

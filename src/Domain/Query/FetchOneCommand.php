@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Backend\Api\RpcSkeleton\Domain\Query;
 
+use Backend\Api\RpcSkeleton\Domain\ValueObject\Uuid;
+use Exception;
 use MicroModule\Base\Domain\Command\CommandInterface;
 use MicroModule\ValueObject\Identity\UUID as ProcessUuid;
-use Exception;
-use Backend\Api\RpcSkeleton\Domain\ValueObject\Uuid;
 use Ramsey\Uuid\UuidInterface;
 
 /**

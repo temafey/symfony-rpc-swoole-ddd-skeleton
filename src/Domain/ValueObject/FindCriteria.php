@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Backend\Api\RpcSkeleton\Domain\ValueObject;
 
-use MicroModule\ValueObject\Structure\Collection;
+use MicroModule\ValueObject\Structure\Dictionary;
 
 /**
  * Class FindCriteria.
  */
-class FindCriteria extends Collection
+class FindCriteria extends Dictionary
 {
 }

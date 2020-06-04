@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Backend\Api\RpcSkeleton\Tests\Unit\Domain\QueryHandler;
+namespace Backend\Api\RpcSkeleton\Tests\Unit\Domain\Query;
 
-use MicroModule\Base\Domain\Command\CommandInterface;
-use Exception;
 use Backend\Api\RpcSkeleton\Domain\Query\FindCommand;
 use Backend\Api\RpcSkeleton\Tests\Unit\Mock\Domain\ValueObjectMockHelper;
 use Backend\Api\RpcSkeleton\Tests\Unit\UnitTestCase;
+use Exception;
+use MicroModule\Base\Domain\Command\CommandInterface;
 
 /**
  * Test for class FindCommand.

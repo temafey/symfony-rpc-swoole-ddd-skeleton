@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Backend\Api\RpcSkeleton\Tests\Unit\Domain\ValueObject;
 
-use MicroModule\ValueObject\StringLiteral\StringLiteral;
 use Backend\Api\RpcSkeleton\Domain\ValueObject\Url;
 use Backend\Api\RpcSkeleton\Tests\Unit\Mock\Domain\ValueObjectMockHelper;
 use Backend\Api\RpcSkeleton\Tests\Unit\UnitTestCase;
+use MicroModule\ValueObject\StringLiteral\StringLiteral;
 use TypeError;
 
 /**

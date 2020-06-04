@@ -18,4 +18,5 @@ return [
     HarmBandstra\SwaggerUiBundle\HBSwaggerUiBundle::class => ['all' => true],
     K911\Swoole\Bridge\Symfony\Bundle\SwooleBundle::class => ['all' => true],
     Sentry\SentryBundle\SentryBundle::class => ['all' => true],
+    Symplify\ParameterNameGuard\ParameterNameGuardBundle::class => ['dev' => true, 'test' => true],
 ];

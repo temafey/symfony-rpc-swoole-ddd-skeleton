@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Backend\Api\RpcSkeleton\Tests\Integration\Domain\Command;
 
-use MicroModule\Task\Application\Processor\JobCommandBusProcessor;
+use Backend\Api\RpcSkeleton\Application\Factory\CommandFactory;
 use Exception;
-use Backend\Api\RpcSkeleton\Domain\Factory\CommandFactory;
+use MicroModule\Task\Application\Processor\JobCommandBusProcessor;
 
 /**
  * Class ItemDeleteTaskHandlerTest.

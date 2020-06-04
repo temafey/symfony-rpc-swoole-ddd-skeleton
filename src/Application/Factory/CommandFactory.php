@@ -2,13 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Backend\Api\RpcSkeleton\Domain\Factory;
+namespace Backend\Api\RpcSkeleton\Application\Factory;
 
-use MicroModule\Base\Domain\Command\CommandInterface;
-use MicroModule\Base\Domain\Factory\CommandFactoryInterface;
-use MicroModule\Base\Domain\Exception\FactoryException;
-use MicroModule\ValueObject\Identity\UUID as ProcessUuid;
-use Exception;
+use Backend\Api\RpcSkeleton\Application\Dto\ItemDto;
 use Backend\Api\RpcSkeleton\Domain\Command\ItemAddIdCommand;
 use Backend\Api\RpcSkeleton\Domain\Command\ItemCreateCommand;
 use Backend\Api\RpcSkeleton\Domain\Command\ItemCreateTaskCommand;
@@ -19,11 +15,15 @@ use Backend\Api\RpcSkeleton\Domain\Command\ItemUpdateTaskCommand;
 use Backend\Api\RpcSkeleton\Domain\Query\FetchOneCommand;
 use Backend\Api\RpcSkeleton\Domain\Query\FindCommand;
 use Backend\Api\RpcSkeleton\Domain\Query\FindLiteCommand;
-use Backend\Api\RpcSkeleton\Application\Dto\ItemDto;
 use Backend\Api\RpcSkeleton\Domain\ValueObject\FindCriteria;
 use Backend\Api\RpcSkeleton\Domain\ValueObject\Id;
 use Backend\Api\RpcSkeleton\Domain\ValueObject\Item;
 use Backend\Api\RpcSkeleton\Domain\ValueObject\Uuid;
+use Exception;
+use MicroModule\Base\Domain\Command\CommandInterface;
+use MicroModule\Base\Domain\Exception\FactoryException;
+use MicroModule\Base\Domain\Factory\CommandFactoryInterface;
+use MicroModule\ValueObject\Identity\UUID as ProcessUuid;
 
 /**
  * Class CommandFactory.

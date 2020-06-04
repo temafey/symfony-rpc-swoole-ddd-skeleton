@@ -30,7 +30,7 @@ class ItemAddIdHandlerTest extends UnitTestCase
      *
      * @covers       \Backend\Api\RpcSkeleton\Application\CommandHandler\ItemAddIdHandler::handle
      *
-     * @dataProvider \Backend\Api\RpcSkeleton\Tests\Unit\DataProvider\ApplicationCommandHandler$1HandlerDataProvider::getDataForHandleMethod()
+     * @dataProvider \Backend\Api\RpcSkeleton\Tests\Unit\DataProvider\Application\CommandHandler\ItemAddIdHandlerDataProvider::getDataForHandleMethod()
      *
      * @param mixed[] $mockArgs
      * @param mixed[] $mockTimes

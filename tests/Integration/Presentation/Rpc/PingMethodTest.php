@@ -24,9 +24,9 @@ class PingMethodTest extends WebTestCase
      *
      * @param string $method
      * @param string $uri
-     * @param array $server
-     * @param array $params
-     * @param array $expected
+     * @param array  $server
+     * @param array  $params
+     * @param array  $expected
      */
     public function requestToPingMethodShouldReturnPongInResponse(string $method, string $uri, array $server, array $params, array $expected): void
     {

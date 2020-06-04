@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace Backend\Api\RpcSkeleton\Application\CommandHandler;
 
 use Backend\Api\RpcSkeleton\Domain\Command\ItemCreateCommand;
-use Exception;
 use Backend\Api\RpcSkeleton\Domain\Factory\ItemFactory;
 use Backend\Api\RpcSkeleton\Domain\Repository\ItemRepositoryInterface;
+use Exception;
 
 /**
  * Class ItemCreateHandler.

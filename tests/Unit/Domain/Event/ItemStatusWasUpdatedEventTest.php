@@ -95,7 +95,7 @@ class ItemStatusWasUpdatedEventTest extends UnitTestCase
     public function eventShouldFailWithTypeErrorWhenDeserializeWithWrongDataTest(array $mockArgs): void
     {
         $data = [
-            'process_uuid' => (string)$mockArgs['UUID']['toNative'],
+            'process_uuid' => (string) $mockArgs['UUID']['toNative'],
             'uuid' => $mockArgs['Uuid']['toNative'],
             'status' => $mockArgs['UUID']['toNative'],
         ];
@@ -121,7 +121,7 @@ class ItemStatusWasUpdatedEventTest extends UnitTestCase
     public function eventShouldFailWithStatusInvalidExceptionWhenDeserializeWithWrongDataTest(array $mockArgs): void
     {
         $data = [
-            'process_uuid' => (string)$mockArgs['UUID']['toNative'],
+            'process_uuid' => (string) $mockArgs['UUID']['toNative'],
             'uuid' => $mockArgs['Uuid']['toNative'],
             'status' => $mockArgs['Status']['toNative'],
         ];

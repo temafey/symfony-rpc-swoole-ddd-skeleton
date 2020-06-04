@@ -4,14 +4,14 @@ declare(strict_types=1);
 
 namespace Backend\Api\RpcSkeleton\Tests\Unit\Domain\ValueObject;
 
-use MicroModule\ValueObject\ValueObjectInterface;
-use Broadway\Serializer\Serializable;
-use Exception;
 use Backend\Api\RpcSkeleton\Domain\Exception\ValueObjectInvalidException;
 use Backend\Api\RpcSkeleton\Domain\Exception\ValueObjectInvalidNativeValueException;
 use Backend\Api\RpcSkeleton\Domain\ValueObject\Item;
 use Backend\Api\RpcSkeleton\Tests\Unit\Mock\Domain\ValueObjectMockHelper;
 use Backend\Api\RpcSkeleton\Tests\Unit\UnitTestCase;
+use Broadway\Serializer\Serializable;
+use Exception;
+use MicroModule\ValueObject\ValueObjectInterface;
 
 /**
  * Test for class Item.

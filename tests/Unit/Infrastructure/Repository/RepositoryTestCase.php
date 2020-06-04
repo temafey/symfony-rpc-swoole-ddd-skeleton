@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Backend\Api\RpcSkeleton\Tests\Unit\Infrastructure\Repository;
 
-use Backend\Api\RpcSkeleton\Tests\Integration\Application\ApplicationTestCase;
+use Backend\Api\RpcSkeleton\Tests\Integration\ApplicationTestCase;
 use Broadway\EventHandling\SimpleEventBus;
 use Broadway\EventHandling\TraceableEventBus;
 use Broadway\EventStore\InMemoryEventStore;

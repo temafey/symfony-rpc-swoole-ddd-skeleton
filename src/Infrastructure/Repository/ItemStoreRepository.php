@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Backend\Api\RpcSkeleton\Infrastructure\Repository;
 
-use MicroModule\Snapshotting\EventSourcing\SnapshottingEventSourcingRepository;
-use MicroModule\Snapshotting\EventSourcing\SnapshottingEventSourcingRepositoryException;
-use InvalidArgumentException;
 use Backend\Api\RpcSkeleton\Domain\Entity\ItemEntity;
 use Backend\Api\RpcSkeleton\Domain\Repository\ItemRepositoryInterface;
 use Backend\Api\RpcSkeleton\Domain\ValueObject\Uuid;
+use InvalidArgumentException;
+use MicroModule\Snapshotting\EventSourcing\SnapshottingEventSourcingRepository;
+use MicroModule\Snapshotting\EventSourcing\SnapshottingEventSourcingRepositoryException;
 
 /**
  * Class ItemStore.

@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Backend\Api\RpcSkeleton\Tests\Unit\DataProvider\Domain\Command;
+namespace Backend\Api\RpcSkeleton\Tests\Unit\DataProvider\Application\CommandHandler;
 
 /**
  * DataProvider for class {testClassName}.
  */
-class ItemDeleteHandlerDataProvider
+class ItemUpdateTaskHandlerDataProvider
 {
     /**
      * Return test data for Backend\Api\RpcSkeleton\ApplicationCommandHandler$1Handler.
@@ -19,176 +19,113 @@ class ItemDeleteHandlerDataProvider
         return [
             0 => [
                 0 => [
-                    'ItemRepositoryInterface' => [
-                        'get' => [
-                            'addId' => null,
-                            'delete' => null,
+                    'ItemTaskRepositoryInterface' => [
+                        'addCreateTask' => null,
+                        'addUpdateTask' => '1991-09-27',
+                        'addDeleteTask' => null,
+                    ],
+                    'ItemUpdateTaskCommand' => [
+                        'getItemUuid' => [
+                            'toNative' => 'f3be4564-2bb1-3fe3-a4a4-9c17c04b2cbb',
                             'getUuid' => [
-                                'toNative' => '96241498-2a37-3e85-a150-18d8f6475b23',
-                                'getUuid' => [
-                                    'toString' => '0321a5ea-79cb-39fd-a22c-244e7b94a91a',
-                                ],
+                                'toString' => '2b180b10-cbd1-3093-bb52-badb7f82463e',
+                            ],
+                            'sameValueAs' => true,
+                            'isEmpty' => true,
+                        ],
+                        'getItem' => [
+                            'toArray' => [
+                                0 => 'veritatis',
+                                1 => 'repellendus',
+                                2 => 'sit',
+                            ],
+                            'sameValueAs' => false,
+                            'toNative' => [
+                                0 => 'veritatis',
+                                1 => 'repellendus',
+                                2 => 'sit',
+                            ],
+                            'getId' => [
+                                'sameValueAs' => false,
+                                'toNative' => 1,
+                            ],
+                            'setId' => null,
+                            'getParentId' => [
+                                'sameValueAs' => false,
+                                'toNative' => 7,
+                            ],
+                            'setParentId' => null,
+                            'getName' => [
+                                'toNative' => 'Maximillian Ebert',
                                 'sameValueAs' => false,
                                 'isEmpty' => false,
                             ],
-                            'getId' => [
-                                'sameValueAs' => true,
-                                'toNative' => 2,
-                            ],
-                            'getParentId' => [
-                                'sameValueAs' => true,
-                                'toNative' => 4,
-                            ],
-                            'getName' => [
-                                'toNative' => 'Lillian Cronin',
-                                'sameValueAs' => true,
-                                'isEmpty' => true,
-                            ],
+                            'setName' => 'Abe Yundt',
                             'getStatus' => [
                                 'isActive' => false,
                                 'sameValueAs' => false,
-                                'toNative' => 2,
+                                'toNative' => 7,
                             ],
+                            'setStatus' => null,
                             'getUrl' => [
-                                'toNative' => 'http://gottlieb.net/',
-                                'sameValueAs' => true,
-                                'isEmpty' => true,
+                                'toNative' => 'http://www.kiehn.info/ex-non-asperiores-atque-labore-ipsam.html',
+                                'sameValueAs' => false,
+                                'isEmpty' => false,
                             ],
+                            'setUrl' => 'http://www.casper.com/rerum-vitae-omnis-harum-distinctio-possimus',
                             'getCreatedAt' => [
                                 'toNative' => [
-                                    'getTimestamp' => '06:25:31',
+                                    'getTimestamp' => '11:19:27',
                                 ],
                             ],
+                            'setCreatedAt' => null,
                             'getUpdatedAt' => [
                                 'toNative' => [
-                                    'getTimestamp' => '18:07:31',
+                                    'getTimestamp' => '17:38:07',
                                 ],
-                                'sameValueAs' => true,
+                                'sameValueAs' => false,
                                 'getDate' => [
                                     'toNative' => [
-                                        'getTimestamp' => '18:19:27',
+                                        'getTimestamp' => '20:58:58',
                                     ],
                                 ],
                                 'getTime' => [
                                     'toNative' => [
-                                        'getTimestamp' => '02:56:52',
+                                        'getTimestamp' => '05:30:50',
                                     ],
                                 ],
                                 'toNativeDateTime' => [
-                                    'getTimestamp' => '11:45:09',
+                                    'getTimestamp' => '13:26:41',
                                 ],
                             ],
-                            'initializeState' => 'Michigan',
-                            'getPlayhead' => 9,
-                        ],
-                        'store' => null,
-                    ],
-                    'ItemDeleteCommand' => [
-                        'getItemUuid' => [
-                            'toNative' => '02d13e2d-c736-3417-8c7c-89c9aeddddf8',
-                            'getUuid' => [
-                                'toString' => '76243581-5267-311f-afb3-8dd7efc88674',
+                            'setUpdatedAt' => '1993-06-01',
+                            'serialize' => [
+                                0 => 'veritatis',
+                                1 => 'repellendus',
+                                2 => 'sit',
                             ],
-                            'sameValueAs' => false,
-                            'isEmpty' => false,
                         ],
                         'getProcessUuid' => [
-                            'toNative' => 'c25d819a-a45e-3db5-af25-0c6a75061911',
+                            'toNative' => 'eaa7d255-68e9-3cf8-baca-9e8af54a6538',
                             'getUuid' => [
-                                'toString' => '49af9fbe-ec89-3ba3-8cdb-a93a2f9cbab7',
+                                'toString' => 'b8e9d959-86c0-3ca9-87bb-0c0453a4331c',
                             ],
-                            'sameValueAs' => false,
-                            'isEmpty' => false,
+                            'sameValueAs' => true,
+                            'isEmpty' => true,
                         ],
                         'getUuid' => [
-                            'toString' => 'd6adedbb-25bd-3be2-a563-3aeee6c712d8',
+                            'toString' => 'c5372413-42b4-30a7-bbe4-7c4212c1d77f',
                         ],
                     ],
                 ],
                 1 => [
-                    'ItemRepositoryInterface' => [
+                    'ItemTaskRepositoryInterface' => [
                         'times' => 0,
-                        'get' => [
-                            'times' => 1,
-                            'addId' => 0,
-                            'delete' => 1,
-                            'getUuid' => [
-                                'times' => 0,
-                                'toNative' => 0,
-                                'getUuid' => [
-                                    'times' => 0,
-                                    'toString' => 0,
-                                ],
-                                'sameValueAs' => 0,
-                                'isEmpty' => 0,
-                            ],
-                            'getId' => [
-                                'times' => 0,
-                                'sameValueAs' => 0,
-                                'toNative' => 0,
-                            ],
-                            'getParentId' => [
-                                'times' => 0,
-                                'sameValueAs' => 0,
-                                'toNative' => 0,
-                            ],
-                            'getName' => [
-                                'times' => 0,
-                                'toNative' => 0,
-                                'sameValueAs' => 0,
-                                'isEmpty' => 0,
-                            ],
-                            'getStatus' => [
-                                'times' => 0,
-                                'isActive' => 0,
-                                'sameValueAs' => 0,
-                                'toNative' => 0,
-                            ],
-                            'getUrl' => [
-                                'times' => 0,
-                                'toNative' => 0,
-                                'sameValueAs' => 0,
-                                'isEmpty' => 0,
-                            ],
-                            'getCreatedAt' => [
-                                'times' => 0,
-                                'toNative' => [
-                                    'times' => 0,
-                                    'getTimestamp' => 0,
-                                ],
-                            ],
-                            'getUpdatedAt' => [
-                                'times' => 0,
-                                'toNative' => [
-                                    'times' => 0,
-                                    'getTimestamp' => 0,
-                                ],
-                                'sameValueAs' => 0,
-                                'getDate' => [
-                                    'times' => 0,
-                                    'toNative' => [
-                                        'times' => 0,
-                                        'getTimestamp' => 0,
-                                    ],
-                                ],
-                                'getTime' => [
-                                    'times' => 0,
-                                    'toNative' => [
-                                        'times' => 0,
-                                        'getTimestamp' => 0,
-                                    ],
-                                ],
-                                'toNativeDateTime' => [
-                                    'times' => 0,
-                                    'getTimestamp' => 0,
-                                ],
-                            ],
-                            'initializeState' => 0,
-                            'getPlayhead' => 0,
-                        ],
-                        'store' => 1,
+                        'addCreateTask' => 0,
+                        'addUpdateTask' => 1,
+                        'addDeleteTask' => 0,
                     ],
-                    'ItemDeleteCommand' => [
+                    'ItemUpdateTaskCommand' => [
                         'times' => 0,
                         'getItemUuid' => [
                             'times' => 1,
@@ -200,8 +137,83 @@ class ItemDeleteHandlerDataProvider
                             'sameValueAs' => 0,
                             'isEmpty' => 0,
                         ],
+                        'getItem' => [
+                            'times' => 1,
+                            'toArray' => 0,
+                            'sameValueAs' => 0,
+                            'toNative' => 0,
+                            'getId' => [
+                                'times' => 0,
+                                'sameValueAs' => 0,
+                                'toNative' => 0,
+                            ],
+                            'setId' => 0,
+                            'getParentId' => [
+                                'times' => 0,
+                                'sameValueAs' => 0,
+                                'toNative' => 0,
+                            ],
+                            'setParentId' => 0,
+                            'getName' => [
+                                'times' => 0,
+                                'toNative' => 0,
+                                'sameValueAs' => 0,
+                                'isEmpty' => 0,
+                            ],
+                            'setName' => 0,
+                            'getStatus' => [
+                                'times' => 0,
+                                'isActive' => 0,
+                                'sameValueAs' => 0,
+                                'toNative' => 0,
+                            ],
+                            'setStatus' => 0,
+                            'getUrl' => [
+                                'times' => 0,
+                                'toNative' => 0,
+                                'sameValueAs' => 0,
+                                'isEmpty' => 0,
+                            ],
+                            'setUrl' => 0,
+                            'getCreatedAt' => [
+                                'times' => 0,
+                                'toNative' => [
+                                    'times' => 0,
+                                    'getTimestamp' => 0,
+                                ],
+                            ],
+                            'setCreatedAt' => 0,
+                            'getUpdatedAt' => [
+                                'times' => 0,
+                                'toNative' => [
+                                    'times' => 0,
+                                    'getTimestamp' => 0,
+                                ],
+                                'sameValueAs' => 0,
+                                'getDate' => [
+                                    'times' => 0,
+                                    'toNative' => [
+                                        'times' => 0,
+                                        'getTimestamp' => 0,
+                                    ],
+                                ],
+                                'getTime' => [
+                                    'times' => 0,
+                                    'toNative' => [
+                                        'times' => 0,
+                                        'getTimestamp' => 0,
+                                    ],
+                                ],
+                                'toNativeDateTime' => [
+                                    'times' => 0,
+                                    'getTimestamp' => 0,
+                                ],
+                            ],
+                            'setUpdatedAt' => 0,
+                            'serialize' => 0,
+                        ],
                         'getProcessUuid' => [
-                            'times' => 0,
+                            'times' => 1,
                             'toNative' => 0,
                             'getUuid' => [
                                 'times' => 0,
@@ -219,176 +231,113 @@ class ItemDeleteHandlerDataProvider
             ],
             1 => [
                 0 => [
-                    'ItemRepositoryInterface' => [
-                        'get' => [
-                            'addId' => null,
-                            'delete' => null,
-                            'getUuid' => [
-                                'toNative' => '0884f581-c0c1-31e6-8262-554138e1da2f',
-                                'getUuid' => [
-                                    'toString' => '55c09116-c2cc-3505-9af9-3449e67bb5e5',
-                                ],
-                                'sameValueAs' => false,
-                                'isEmpty' => false,
-                            ],
-                            'getId' => [
-                                'sameValueAs' => false,
-                                'toNative' => 5,
-                            ],
-                            'getParentId' => [
-                                'sameValueAs' => false,
-                                'toNative' => 7,
-                            ],
-                            'getName' => [
-                                'toNative' => 'Guiseppe Lehner',
-                                'sameValueAs' => true,
-                                'isEmpty' => true,
-                            ],
-                            'getStatus' => [
-                                'isActive' => false,
-                                'sameValueAs' => false,
-                                'toNative' => 3,
-                            ],
-                            'getUrl' => [
-                                'toNative' => 'http://www.howe.org/asperiores-aut-quam-enim-sunt-totam-quos-velit-optio.html',
-                                'sameValueAs' => false,
-                                'isEmpty' => false,
-                            ],
-                            'getCreatedAt' => [
-                                'toNative' => [
-                                    'getTimestamp' => '01:05:16',
-                                ],
-                            ],
-                            'getUpdatedAt' => [
-                                'toNative' => [
-                                    'getTimestamp' => '18:15:15',
-                                ],
-                                'sameValueAs' => true,
-                                'getDate' => [
-                                    'toNative' => [
-                                        'getTimestamp' => '01:18:31',
-                                    ],
-                                ],
-                                'getTime' => [
-                                    'toNative' => [
-                                        'getTimestamp' => '22:38:49',
-                                    ],
-                                ],
-                                'toNativeDateTime' => [
-                                    'getTimestamp' => '10:39:58',
-                                ],
-                            ],
-                            'initializeState' => 'Michigan',
-                            'getPlayhead' => 9,
-                        ],
-                        'store' => null,
+                    'ItemTaskRepositoryInterface' => [
+                        'addCreateTask' => null,
+                        'addUpdateTask' => '1992-05-05',
+                        'addDeleteTask' => null,
                     ],
-                    'ItemDeleteCommand' => [
+                    'ItemUpdateTaskCommand' => [
                         'getItemUuid' => [
-                            'toNative' => 'a91442de-9b5e-3908-be39-1ec657e4af5b',
+                            'toNative' => '8587a20a-b2c4-37e8-8e79-462403b15db7',
                             'getUuid' => [
-                                'toString' => '6fab91cf-c8ea-3ef3-b822-775456fd3248',
+                                'toString' => 'b2208a4d-c31c-33c0-9ae9-cf4e7a145579',
                             ],
                             'sameValueAs' => false,
                             'isEmpty' => false,
                         ],
-                        'getProcessUuid' => [
-                            'toNative' => '229d1658-6c3f-3ba3-b030-661ef755ef28',
-                            'getUuid' => [
-                                'toString' => '1d6cada8-6e71-3f05-97d2-44249eda9bc8',
+                        'getItem' => [
+                            'toArray' => [
+                                0 => 'molestiae',
+                                1 => 'ipsa',
+                                2 => 'quod',
                             ],
-                            'sameValueAs' => true,
-                            'isEmpty' => true,
+                            'sameValueAs' => false,
+                            'toNative' => [
+                                0 => 'molestiae',
+                                1 => 'ipsa',
+                                2 => 'quod',
+                            ],
+                            'getId' => [
+                                'sameValueAs' => true,
+                                'toNative' => 8,
+                            ],
+                            'setId' => null,
+                            'getParentId' => [
+                                'sameValueAs' => true,
+                                'toNative' => 1,
+                            ],
+                            'setParentId' => null,
+                            'getName' => [
+                                'toNative' => 'Mr. Delaney Ferry II',
+                                'sameValueAs' => true,
+                                'isEmpty' => true,
+                            ],
+                            'setName' => 'Mrs. Pinkie Haley V',
+                            'getStatus' => [
+                                'isActive' => true,
+                                'sameValueAs' => true,
+                                'toNative' => 5,
+                            ],
+                            'setStatus' => null,
+                            'getUrl' => [
+                                'toNative' => 'http://www.bergstrom.biz/asperiores-sed-laboriosam-pariatur-quod-eos-et-in.html',
+                                'sameValueAs' => true,
+                                'isEmpty' => true,
+                            ],
+                            'setUrl' => 'http://www.murazik.biz/dolor-libero-cum-explicabo-nam-quis.html',
+                            'getCreatedAt' => [
+                                'toNative' => [
+                                    'getTimestamp' => '12:20:13',
+                                ],
+                            ],
+                            'setCreatedAt' => null,
+                            'getUpdatedAt' => [
+                                'toNative' => [
+                                    'getTimestamp' => '01:51:47',
+                                ],
+                                'sameValueAs' => true,
+                                'getDate' => [
+                                    'toNative' => [
+                                        'getTimestamp' => '22:14:12',
+                                    ],
+                                ],
+                                'getTime' => [
+                                    'toNative' => [
+                                        'getTimestamp' => '02:18:34',
+                                    ],
+                                ],
+                                'toNativeDateTime' => [
+                                    'getTimestamp' => '14:11:45',
+                                ],
+                            ],
+                            'setUpdatedAt' => '1979-11-09',
+                            'serialize' => [
+                                0 => 'molestiae',
+                                1 => 'ipsa',
+                                2 => 'quod',
+                            ],
+                        ],
+                        'getProcessUuid' => [
+                            'toNative' => '5ef0aa07-f965-3346-b612-88636b38c04f',
+                            'getUuid' => [
+                                'toString' => '77ed489b-6c61-376d-96b7-82e38ef92996',
+                            ],
+                            'sameValueAs' => false,
+                            'isEmpty' => false,
                         ],
                         'getUuid' => [
-                            'toString' => 'efc40532-4323-3fdc-b577-fdc787bd944c',
+                            'toString' => '96144fa3-7b40-39a3-bf93-a870e1677beb',
                         ],
                     ],
                 ],
                 1 => [
-                    'ItemRepositoryInterface' => [
+                    'ItemTaskRepositoryInterface' => [
                         'times' => 0,
-                        'get' => [
-                            'times' => 1,
-                            'addId' => 0,
-                            'delete' => 1,
-                            'getUuid' => [
-                                'times' => 0,
-                                'toNative' => 0,
-                                'getUuid' => [
-                                    'times' => 0,
-                                    'toString' => 0,
-                                ],
-                                'sameValueAs' => 0,
-                                'isEmpty' => 0,
-                            ],
-                            'getId' => [
-                                'times' => 0,
-                                'sameValueAs' => 0,
-                                'toNative' => 0,
-                            ],
-                            'getParentId' => [
-                                'times' => 0,
-                                'sameValueAs' => 0,
-                                'toNative' => 0,
-                            ],
-                            'getName' => [
-                                'times' => 0,
-                                'toNative' => 0,
-                                'sameValueAs' => 0,
-                                'isEmpty' => 0,
-                            ],
-                            'getStatus' => [
-                                'times' => 0,
-                                'isActive' => 0,
-                                'sameValueAs' => 0,
-                                'toNative' => 0,
-                            ],
-                            'getUrl' => [
-                                'times' => 0,
-                                'toNative' => 0,
-                                'sameValueAs' => 0,
-                                'isEmpty' => 0,
-                            ],
-                            'getCreatedAt' => [
-                                'times' => 0,
-                                'toNative' => [
-                                    'times' => 0,
-                                    'getTimestamp' => 0,
-                                ],
-                            ],
-                            'getUpdatedAt' => [
-                                'times' => 0,
-                                'toNative' => [
-                                    'times' => 0,
-                                    'getTimestamp' => 0,
-                                ],
-                                'sameValueAs' => 0,
-                                'getDate' => [
-                                    'times' => 0,
-                                    'toNative' => [
-                                        'times' => 0,
-                                        'getTimestamp' => 0,
-                                    ],
-                                ],
-                                'getTime' => [
-                                    'times' => 0,
-                                    'toNative' => [
-                                        'times' => 0,
-                                        'getTimestamp' => 0,
-                                    ],
-                                ],
-                                'toNativeDateTime' => [
-                                    'times' => 0,
-                                    'getTimestamp' => 0,
-                                ],
-                            ],
-                            'initializeState' => 0,
-                            'getPlayhead' => 0,
-                        ],
-                        'store' => 1,
+                        'addCreateTask' => 0,
+                        'addUpdateTask' => 1,
+                        'addDeleteTask' => 0,
                     ],
-                    'ItemDeleteCommand' => [
+                    'ItemUpdateTaskCommand' => [
                         'times' => 0,
                         'getItemUuid' => [
                             'times' => 1,
@@ -400,8 +349,83 @@ class ItemDeleteHandlerDataProvider
                             'sameValueAs' => 0,
                             'isEmpty' => 0,
                         ],
+                        'getItem' => [
+                            'times' => 1,
+                            'toArray' => 0,
+                            'sameValueAs' => 0,
+                            'toNative' => 0,
+                            'getId' => [
+                                'times' => 0,
+                                'sameValueAs' => 0,
+                                'toNative' => 0,
+                            ],
+                            'setId' => 0,
+                            'getParentId' => [
+                                'times' => 0,
+                                'sameValueAs' => 0,
+                                'toNative' => 0,
+                            ],
+                            'setParentId' => 0,
+                            'getName' => [
+                                'times' => 0,
+                                'toNative' => 0,
+                                'sameValueAs' => 0,
+                                'isEmpty' => 0,
+                            ],
+                            'setName' => 0,
+                            'getStatus' => [
+                                'times' => 0,
+                                'isActive' => 0,
+                                'sameValueAs' => 0,
+                                'toNative' => 0,
+                            ],
+                            'setStatus' => 0,
+                            'getUrl' => [
+                                'times' => 0,
+                                'toNative' => 0,
+                                'sameValueAs' => 0,
+                                'isEmpty' => 0,
+                            ],
+                            'setUrl' => 0,
+                            'getCreatedAt' => [
+                                'times' => 0,
+                                'toNative' => [
+                                    'times' => 0,
+                                    'getTimestamp' => 0,
+                                ],
+                            ],
+                            'setCreatedAt' => 0,
+                            'getUpdatedAt' => [
+                                'times' => 0,
+                                'toNative' => [
+                                    'times' => 0,
+                                    'getTimestamp' => 0,
+                                ],
+                                'sameValueAs' => 0,
+                                'getDate' => [
+                                    'times' => 0,
+                                    'toNative' => [
+                                        'times' => 0,
+                                        'getTimestamp' => 0,
+                                    ],
+                                ],
+                                'getTime' => [
+                                    'times' => 0,
+                                    'toNative' => [
+                                        'times' => 0,
+                                        'getTimestamp' => 0,
+                                    ],
+                                ],
+                                'toNativeDateTime' => [
+                                    'times' => 0,
+                                    'getTimestamp' => 0,
+                                ],
+                            ],
+                            'setUpdatedAt' => 0,
+                            'serialize' => 0,
+                        ],
                         'getProcessUuid' => [
-                            'times' => 0,
+                            'times' => 1,
                             'toNative' => 0,
                             'getUuid' => [
                                 'times' => 0,
@@ -419,176 +443,113 @@ class ItemDeleteHandlerDataProvider
             ],
             2 => [
                 0 => [
-                    'ItemRepositoryInterface' => [
-                        'get' => [
-                            'addId' => null,
-                            'delete' => null,
+                    'ItemTaskRepositoryInterface' => [
+                        'addCreateTask' => null,
+                        'addUpdateTask' => '1970-12-24',
+                        'addDeleteTask' => null,
+                    ],
+                    'ItemUpdateTaskCommand' => [
+                        'getItemUuid' => [
+                            'toNative' => '27ee3881-986f-3f47-95c1-0ec58f4a6ee1',
                             'getUuid' => [
-                                'toNative' => 'e3ad518e-3d1e-3eed-b942-249e752aa874',
-                                'getUuid' => [
-                                    'toString' => '00e5df31-b418-321b-9fd9-9af1d0bd3c2b',
-                                ],
-                                'sameValueAs' => true,
-                                'isEmpty' => true,
+                                'toString' => 'd1f07e2e-7102-3af8-9313-745425f29aa1',
+                            ],
+                            'sameValueAs' => true,
+                            'isEmpty' => true,
+                        ],
+                        'getItem' => [
+                            'toArray' => [
+                                0 => 'rerum',
+                                1 => 'aliquam',
+                                2 => 'dolores',
+                            ],
+                            'sameValueAs' => false,
+                            'toNative' => [
+                                0 => 'rerum',
+                                1 => 'aliquam',
+                                2 => 'dolores',
                             ],
                             'getId' => [
-                                'sameValueAs' => true,
-                                'toNative' => 5,
+                                'sameValueAs' => false,
+                                'toNative' => 9,
                             ],
+                            'setId' => null,
                             'getParentId' => [
                                 'sameValueAs' => true,
-                                'toNative' => 8,
+                                'toNative' => 3,
                             ],
+                            'setParentId' => null,
                             'getName' => [
-                                'toNative' => 'Presley Mitchell II',
+                                'toNative' => 'Olaf Kris MD',
                                 'sameValueAs' => false,
                                 'isEmpty' => false,
                             ],
+                            'setName' => 'Miss Jessica Leannon PhD',
                             'getStatus' => [
-                                'isActive' => false,
-                                'sameValueAs' => false,
-                                'toNative' => 5,
-                            ],
-                            'getUrl' => [
-                                'toNative' => 'http://www.donnelly.net/',
+                                'isActive' => true,
                                 'sameValueAs' => true,
-                                'isEmpty' => true,
+                                'toNative' => 4,
                             ],
+                            'setStatus' => null,
+                            'getUrl' => [
+                                'toNative' => 'http://www.greenholt.com/adipisci-fugiat-et-nostrum-est.html',
+                                'sameValueAs' => false,
+                                'isEmpty' => false,
+                            ],
+                            'setUrl' => 'http://www.watsica.biz/',
                             'getCreatedAt' => [
                                 'toNative' => [
-                                    'getTimestamp' => '08:57:40',
+                                    'getTimestamp' => '07:45:32',
                                 ],
                             ],
+                            'setCreatedAt' => null,
                             'getUpdatedAt' => [
                                 'toNative' => [
-                                    'getTimestamp' => '00:53:05',
+                                    'getTimestamp' => '01:30:28',
                                 ],
                                 'sameValueAs' => true,
                                 'getDate' => [
                                     'toNative' => [
-                                        'getTimestamp' => '04:11:56',
+                                        'getTimestamp' => '17:30:26',
                                     ],
                                 ],
                                 'getTime' => [
                                     'toNative' => [
-                                        'getTimestamp' => '08:35:48',
+                                        'getTimestamp' => '14:50:30',
                                     ],
                                 ],
                                 'toNativeDateTime' => [
-                                    'getTimestamp' => '01:47:11',
+                                    'getTimestamp' => '16:55:40',
                                 ],
                             ],
-                            'initializeState' => 'Maine',
-                            'getPlayhead' => 2,
-                        ],
-                        'store' => null,
-                    ],
-                    'ItemDeleteCommand' => [
-                        'getItemUuid' => [
-                            'toNative' => '4ff2ff28-30d2-3302-96e4-5b6c6275d8b9',
-                            'getUuid' => [
-                                'toString' => '5b7e6dff-a1fc-389e-b1b4-f514f6141e9b',
+                            'setUpdatedAt' => '1984-04-26',
+                            'serialize' => [
+                                0 => 'rerum',
+                                1 => 'aliquam',
+                                2 => 'dolores',
                             ],
-                            'sameValueAs' => true,
-                            'isEmpty' => true,
                         ],
                         'getProcessUuid' => [
-                            'toNative' => '54f5dd71-6426-39a1-ab99-029f626c271f',
+                            'toNative' => '0781f191-5e66-39ac-81dc-b3376430e9c5',
                             'getUuid' => [
-                                'toString' => '604fc7f4-9590-3cfa-88fb-44ba44fd91b0',
+                                'toString' => '7000619a-324d-3f53-82b3-a5da75a5d70d',
                             ],
-                            'sameValueAs' => true,
-                            'isEmpty' => true,
+                            'sameValueAs' => false,
+                            'isEmpty' => false,
                         ],
                         'getUuid' => [
-                            'toString' => '9517e273-eef3-370e-8266-3dec570b4b37',
+                            'toString' => '192c13a7-a3e5-317f-a138-a9ea0159bbbb',
                         ],
                     ],
                 ],
                 1 => [
-                    'ItemRepositoryInterface' => [
+                    'ItemTaskRepositoryInterface' => [
                         'times' => 0,
-                        'get' => [
-                            'times' => 1,
-                            'addId' => 0,
-                            'delete' => 1,
-                            'getUuid' => [
-                                'times' => 0,
-                                'toNative' => 0,
-                                'getUuid' => [
-                                    'times' => 0,
-                                    'toString' => 0,
-                                ],
-                                'sameValueAs' => 0,
-                                'isEmpty' => 0,
-                            ],
-                            'getId' => [
-                                'times' => 0,
-                                'sameValueAs' => 0,
-                                'toNative' => 0,
-                            ],
-                            'getParentId' => [
-                                'times' => 0,
-                                'sameValueAs' => 0,
-                                'toNative' => 0,
-                            ],
-                            'getName' => [
-                                'times' => 0,
-                                'toNative' => 0,
-                                'sameValueAs' => 0,
-                                'isEmpty' => 0,
-                            ],
-                            'getStatus' => [
-                                'times' => 0,
-                                'isActive' => 0,
-                                'sameValueAs' => 0,
-                                'toNative' => 0,
-                            ],
-                            'getUrl' => [
-                                'times' => 0,
-                                'toNative' => 0,
-                                'sameValueAs' => 0,
-                                'isEmpty' => 0,
-                            ],
-                            'getCreatedAt' => [
-                                'times' => 0,
-                                'toNative' => [
-                                    'times' => 0,
-                                    'getTimestamp' => 0,
-                                ],
-                            ],
-                            'getUpdatedAt' => [
-                                'times' => 0,
-                                'toNative' => [
-                                    'times' => 0,
-                                    'getTimestamp' => 0,
-                                ],
-                                'sameValueAs' => 0,
-                                'getDate' => [
-                                    'times' => 0,
-                                    'toNative' => [
-                                        'times' => 0,
-                                        'getTimestamp' => 0,
-                                    ],
-                                ],
-                                'getTime' => [
-                                    'times' => 0,
-                                    'toNative' => [
-                                        'times' => 0,
-                                        'getTimestamp' => 0,
-                                    ],
-                                ],
-                                'toNativeDateTime' => [
-                                    'times' => 0,
-                                    'getTimestamp' => 0,
-                                ],
-                            ],
-                            'initializeState' => 0,
-                            'getPlayhead' => 0,
-                        ],
-                        'store' => 1,
+                        'addCreateTask' => 0,
+                        'addUpdateTask' => 1,
+                        'addDeleteTask' => 0,
                     ],
-                    'ItemDeleteCommand' => [
+                    'ItemUpdateTaskCommand' => [
                         'times' => 0,
                         'getItemUuid' => [
                             'times' => 1,
@@ -600,8 +561,83 @@ class ItemDeleteHandlerDataProvider
                             'sameValueAs' => 0,
                             'isEmpty' => 0,
                         ],
+                        'getItem' => [
+                            'times' => 1,
+                            'toArray' => 0,
+                            'sameValueAs' => 0,
+                            'toNative' => 0,
+                            'getId' => [
+                                'times' => 0,
+                                'sameValueAs' => 0,
+                                'toNative' => 0,
+                            ],
+                            'setId' => 0,
+                            'getParentId' => [
+                                'times' => 0,
+                                'sameValueAs' => 0,
+                                'toNative' => 0,
+                            ],
+                            'setParentId' => 0,
+                            'getName' => [
+                                'times' => 0,
+                                'toNative' => 0,
+                                'sameValueAs' => 0,
+                                'isEmpty' => 0,
+                            ],
+                            'setName' => 0,
+                            'getStatus' => [
+                                'times' => 0,
+                                'isActive' => 0,
+                                'sameValueAs' => 0,
+                                'toNative' => 0,
+                            ],
+                            'setStatus' => 0,
+                            'getUrl' => [
+                                'times' => 0,
+                                'toNative' => 0,
+                                'sameValueAs' => 0,
+                                'isEmpty' => 0,
+                            ],
+                            'setUrl' => 0,
+                            'getCreatedAt' => [
+                                'times' => 0,
+                                'toNative' => [
+                                    'times' => 0,
+                                    'getTimestamp' => 0,
+                                ],
+                            ],
+                            'setCreatedAt' => 0,
+                            'getUpdatedAt' => [
+                                'times' => 0,
+                                'toNative' => [
+                                    'times' => 0,
+                                    'getTimestamp' => 0,
+                                ],
+                                'sameValueAs' => 0,
+                                'getDate' => [
+                                    'times' => 0,
+                                    'toNative' => [
+                                        'times' => 0,
+                                        'getTimestamp' => 0,
+                                    ],
+                                ],
+                                'getTime' => [
+                                    'times' => 0,
+                                    'toNative' => [
+                                        'times' => 0,
+                                        'getTimestamp' => 0,
+                                    ],
+                                ],
+                                'toNativeDateTime' => [
+                                    'times' => 0,
+                                    'getTimestamp' => 0,
+                                ],
+                            ],
+                            'setUpdatedAt' => 0,
+                            'serialize' => 0,
+                        ],
                         'getProcessUuid' => [
-                            'times' => 0,
+                            'times' => 1,
                             'toNative' => 0,
                             'getUuid' => [
                                 'times' => 0,
@@ -619,176 +655,113 @@ class ItemDeleteHandlerDataProvider
             ],
             3 => [
                 0 => [
-                    'ItemRepositoryInterface' => [
-                        'get' => [
-                            'addId' => null,
-                            'delete' => null,
-                            'getUuid' => [
-                                'toNative' => '3b64c6ff-5d31-3a36-a264-47f7c5968779',
-                                'getUuid' => [
-                                    'toString' => '1669db84-0265-338e-b03f-6b9c09039a01',
-                                ],
-                                'sameValueAs' => false,
-                                'isEmpty' => false,
-                            ],
-                            'getId' => [
-                                'sameValueAs' => true,
-                                'toNative' => 8,
-                            ],
-                            'getParentId' => [
-                                'sameValueAs' => true,
-                                'toNative' => 7,
-                            ],
-                            'getName' => [
-                                'toNative' => 'Annie Batz Jr.',
-                                'sameValueAs' => false,
-                                'isEmpty' => false,
-                            ],
-                            'getStatus' => [
-                                'isActive' => false,
-                                'sameValueAs' => false,
-                                'toNative' => 3,
-                            ],
-                            'getUrl' => [
-                                'toNative' => 'https://www.wilkinson.com/pariatur-accusantium-dolorum-ipsa-quidem-voluptatem',
-                                'sameValueAs' => false,
-                                'isEmpty' => false,
-                            ],
-                            'getCreatedAt' => [
-                                'toNative' => [
-                                    'getTimestamp' => '04:25:28',
-                                ],
-                            ],
-                            'getUpdatedAt' => [
-                                'toNative' => [
-                                    'getTimestamp' => '15:07:55',
-                                ],
-                                'sameValueAs' => true,
-                                'getDate' => [
-                                    'toNative' => [
-                                        'getTimestamp' => '19:21:56',
-                                    ],
-                                ],
-                                'getTime' => [
-                                    'toNative' => [
-                                        'getTimestamp' => '13:32:33',
-                                    ],
-                                ],
-                                'toNativeDateTime' => [
-                                    'getTimestamp' => '13:25:04',
-                                ],
-                            ],
-                            'initializeState' => 'New Hampshire',
-                            'getPlayhead' => 5,
-                        ],
-                        'store' => null,
+                    'ItemTaskRepositoryInterface' => [
+                        'addCreateTask' => null,
+                        'addUpdateTask' => '2020-01-03',
+                        'addDeleteTask' => null,
                     ],
-                    'ItemDeleteCommand' => [
+                    'ItemUpdateTaskCommand' => [
                         'getItemUuid' => [
-                            'toNative' => 'fbe66ac4-f3c3-3778-8e1c-2e8f044619d1',
+                            'toNative' => 'a475fc3f-cfaf-3c70-a6c4-7c3b893f39b3',
                             'getUuid' => [
-                                'toString' => '723c5b46-503f-3b81-b401-193ac2cb9d10',
+                                'toString' => 'b7053981-ae5e-379f-bd3a-5ec4ed66d51b',
                             ],
                             'sameValueAs' => false,
                             'isEmpty' => false,
                         ],
+                        'getItem' => [
+                            'toArray' => [
+                                0 => 'est',
+                                1 => 'et',
+                                2 => 'quam',
+                            ],
+                            'sameValueAs' => true,
+                            'toNative' => [
+                                0 => 'est',
+                                1 => 'et',
+                                2 => 'quam',
+                            ],
+                            'getId' => [
+                                'sameValueAs' => true,
+                                'toNative' => 1,
+                            ],
+                            'setId' => null,
+                            'getParentId' => [
+                                'sameValueAs' => true,
+                                'toNative' => 7,
+                            ],
+                            'setParentId' => null,
+                            'getName' => [
+                                'toNative' => 'Archibald Ruecker',
+                                'sameValueAs' => true,
+                                'isEmpty' => true,
+                            ],
+                            'setName' => 'Syble Hodkiewicz',
+                            'getStatus' => [
+                                'isActive' => true,
+                                'sameValueAs' => true,
+                                'toNative' => 4,
+                            ],
+                            'setStatus' => null,
+                            'getUrl' => [
+                                'toNative' => 'http://ullrich.info/beatae-sequi-laudantium-ut-placeat-quia-amet-excepturi.html',
+                                'sameValueAs' => true,
+                                'isEmpty' => true,
+                            ],
+                            'setUrl' => 'http://upton.com/',
+                            'getCreatedAt' => [
+                                'toNative' => [
+                                    'getTimestamp' => '01:27:24',
+                                ],
+                            ],
+                            'setCreatedAt' => null,
+                            'getUpdatedAt' => [
+                                'toNative' => [
+                                    'getTimestamp' => '15:20:52',
+                                ],
+                                'sameValueAs' => true,
+                                'getDate' => [
+                                    'toNative' => [
+                                        'getTimestamp' => '01:50:08',
+                                    ],
+                                ],
+                                'getTime' => [
+                                    'toNative' => [
+                                        'getTimestamp' => '13:44:36',
+                                    ],
+                                ],
+                                'toNativeDateTime' => [
+                                    'getTimestamp' => '12:28:39',
+                                ],
+                            ],
+                            'setUpdatedAt' => '2006-05-25',
+                            'serialize' => [
+                                0 => 'est',
+                                1 => 'et',
+                                2 => 'quam',
+                            ],
+                        ],
                         'getProcessUuid' => [
-                            'toNative' => 'f69a7ba6-31e7-3f67-b3c2-46c815951ee7',
+                            'toNative' => '80696e7e-1869-3e4f-b57f-3d118eb2b794',
                             'getUuid' => [
-                                'toString' => '8c311f06-e021-3ea2-8894-c45ad2e09317',
+                                'toString' => '612d1359-8f3e-3d93-bbbb-6420ba84492e',
                             ],
                             'sameValueAs' => true,
                             'isEmpty' => true,
                         ],
                         'getUuid' => [
-                            'toString' => 'c0034bf1-a20a-354e-bdab-c69d941a2fee',
+                            'toString' => '8b5b25fc-61a5-3e3a-a25a-42557a277a28',
                         ],
                     ],
                 ],
                 1 => [
-                    'ItemRepositoryInterface' => [
+                    'ItemTaskRepositoryInterface' => [
                         'times' => 0,
-                        'get' => [
-                            'times' => 1,
-                            'addId' => 0,
-                            'delete' => 1,
-                            'getUuid' => [
-                                'times' => 0,
-                                'toNative' => 0,
-                                'getUuid' => [
-                                    'times' => 0,
-                                    'toString' => 0,
-                                ],
-                                'sameValueAs' => 0,
-                                'isEmpty' => 0,
-                            ],
-                            'getId' => [
-                                'times' => 0,
-                                'sameValueAs' => 0,
-                                'toNative' => 0,
-                            ],
-                            'getParentId' => [
-                                'times' => 0,
-                                'sameValueAs' => 0,
-                                'toNative' => 0,
-                            ],
-                            'getName' => [
-                                'times' => 0,
-                                'toNative' => 0,
-                                'sameValueAs' => 0,
-                                'isEmpty' => 0,
-                            ],
-                            'getStatus' => [
-                                'times' => 0,
-                                'isActive' => 0,
-                                'sameValueAs' => 0,
-                                'toNative' => 0,
-                            ],
-                            'getUrl' => [
-                                'times' => 0,
-                                'toNative' => 0,
-                                'sameValueAs' => 0,
-                                'isEmpty' => 0,
-                            ],
-                            'getCreatedAt' => [
-                                'times' => 0,
-                                'toNative' => [
-                                    'times' => 0,
-                                    'getTimestamp' => 0,
-                                ],
-                            ],
-                            'getUpdatedAt' => [
-                                'times' => 0,
-                                'toNative' => [
-                                    'times' => 0,
-                                    'getTimestamp' => 0,
-                                ],
-                                'sameValueAs' => 0,
-                                'getDate' => [
-                                    'times' => 0,
-                                    'toNative' => [
-                                        'times' => 0,
-                                        'getTimestamp' => 0,
-                                    ],
-                                ],
-                                'getTime' => [
-                                    'times' => 0,
-                                    'toNative' => [
-                                        'times' => 0,
-                                        'getTimestamp' => 0,
-                                    ],
-                                ],
-                                'toNativeDateTime' => [
-                                    'times' => 0,
-                                    'getTimestamp' => 0,
-                                ],
-                            ],
-                            'initializeState' => 0,
-                            'getPlayhead' => 0,
-                        ],
-                        'store' => 1,
+                        'addCreateTask' => 0,
+                        'addUpdateTask' => 1,
+                        'addDeleteTask' => 0,
                     ],
-                    'ItemDeleteCommand' => [
+                    'ItemUpdateTaskCommand' => [
                         'times' => 0,
                         'getItemUuid' => [
                             'times' => 1,
@@ -800,8 +773,83 @@ class ItemDeleteHandlerDataProvider
                             'sameValueAs' => 0,
                             'isEmpty' => 0,
                         ],
+                        'getItem' => [
+                            'times' => 1,
+                            'toArray' => 0,
+                            'sameValueAs' => 0,
+                            'toNative' => 0,
+                            'getId' => [
+                                'times' => 0,
+                                'sameValueAs' => 0,
+                                'toNative' => 0,
+                            ],
+                            'setId' => 0,
+                            'getParentId' => [
+                                'times' => 0,
+                                'sameValueAs' => 0,
+                                'toNative' => 0,
+                            ],
+                            'setParentId' => 0,
+                            'getName' => [
+                                'times' => 0,
+                                'toNative' => 0,
+                                'sameValueAs' => 0,
+                                'isEmpty' => 0,
+                            ],
+                            'setName' => 0,
+                            'getStatus' => [
+                                'times' => 0,
+                                'isActive' => 0,
+                                'sameValueAs' => 0,
+                                'toNative' => 0,
+                            ],
+                            'setStatus' => 0,
+                            'getUrl' => [
+                                'times' => 0,
+                                'toNative' => 0,
+                                'sameValueAs' => 0,
+                                'isEmpty' => 0,
+                            ],
+                            'setUrl' => 0,
+                            'getCreatedAt' => [
+                                'times' => 0,
+                                'toNative' => [
+                                    'times' => 0,
+                                    'getTimestamp' => 0,
+                                ],
+                            ],
+                            'setCreatedAt' => 0,
+                            'getUpdatedAt' => [
+                                'times' => 0,
+                                'toNative' => [
+                                    'times' => 0,
+                                    'getTimestamp' => 0,
+                                ],
+                                'sameValueAs' => 0,
+                                'getDate' => [
+                                    'times' => 0,
+                                    'toNative' => [
+                                        'times' => 0,
+                                        'getTimestamp' => 0,
+                                    ],
+                                ],
+                                'getTime' => [
+                                    'times' => 0,
+                                    'toNative' => [
+                                        'times' => 0,
+                                        'getTimestamp' => 0,
+                                    ],
+                                ],
+                                'toNativeDateTime' => [
+                                    'times' => 0,
+                                    'getTimestamp' => 0,
+                                ],
+                            ],
+                            'setUpdatedAt' => 0,
+                            'serialize' => 0,
+                        ],
                         'getProcessUuid' => [
-                            'times' => 0,
+                            'times' => 1,
                             'toNative' => 0,
                             'getUuid' => [
                                 'times' => 0,
@@ -819,176 +867,113 @@ class ItemDeleteHandlerDataProvider
             ],
             4 => [
                 0 => [
-                    'ItemRepositoryInterface' => [
-                        'get' => [
-                            'addId' => null,
-                            'delete' => null,
+                    'ItemTaskRepositoryInterface' => [
+                        'addCreateTask' => null,
+                        'addUpdateTask' => '2013-06-04',
+                        'addDeleteTask' => null,
+                    ],
+                    'ItemUpdateTaskCommand' => [
+                        'getItemUuid' => [
+                            'toNative' => '7722cbb8-c4fa-3f89-aa5c-e78c8785f34b',
                             'getUuid' => [
-                                'toNative' => '10831da8-645f-30a8-a2ff-395efea96898',
-                                'getUuid' => [
-                                    'toString' => '5e1453a9-0e2c-3698-b1a8-2caecef355fc',
-                                ],
-                                'sameValueAs' => false,
-                                'isEmpty' => false,
+                                'toString' => 'eff91cbc-0f56-3b70-9586-1c08d75e6905',
+                            ],
+                            'sameValueAs' => false,
+                            'isEmpty' => false,
+                        ],
+                        'getItem' => [
+                            'toArray' => [
+                                0 => 'neque',
+                                1 => 'eum',
+                                2 => 'omnis',
+                            ],
+                            'sameValueAs' => false,
+                            'toNative' => [
+                                0 => 'neque',
+                                1 => 'eum',
+                                2 => 'omnis',
                             ],
                             'getId' => [
                                 'sameValueAs' => false,
-                                'toNative' => 3,
-                            ],
-                            'getParentId' => [
-                                'sameValueAs' => true,
-                                'toNative' => 2,
-                            ],
-                            'getName' => [
-                                'toNative' => 'Veda Barton',
-                                'sameValueAs' => true,
-                                'isEmpty' => true,
-                            ],
-                            'getStatus' => [
-                                'isActive' => true,
-                                'sameValueAs' => true,
                                 'toNative' => 1,
                             ],
-                            'getUrl' => [
-                                'toNative' => 'https://www.parker.org/placeat-et-saepe-perferendis-repellat',
+                            'setId' => null,
+                            'getParentId' => [
+                                'sameValueAs' => false,
+                                'toNative' => 9,
+                            ],
+                            'setParentId' => null,
+                            'getName' => [
+                                'toNative' => 'Dannie Mosciski',
                                 'sameValueAs' => true,
                                 'isEmpty' => true,
                             ],
+                            'setName' => 'Fredy Pfeffer',
+                            'getStatus' => [
+                                'isActive' => false,
+                                'sameValueAs' => false,
+                                'toNative' => 7,
+                            ],
+                            'setStatus' => null,
+                            'getUrl' => [
+                                'toNative' => 'http://www.aufderhar.com/',
+                                'sameValueAs' => false,
+                                'isEmpty' => false,
+                            ],
+                            'setUrl' => 'https://www.schumm.com/quaerat-optio-quaerat-et',
                             'getCreatedAt' => [
                                 'toNative' => [
-                                    'getTimestamp' => '00:36:48',
+                                    'getTimestamp' => '13:30:33',
                                 ],
                             ],
+                            'setCreatedAt' => null,
                             'getUpdatedAt' => [
                                 'toNative' => [
-                                    'getTimestamp' => '05:30:10',
+                                    'getTimestamp' => '10:04:20',
                                 ],
                                 'sameValueAs' => true,
                                 'getDate' => [
                                     'toNative' => [
-                                        'getTimestamp' => '11:02:58',
+                                        'getTimestamp' => '21:44:33',
                                     ],
                                 ],
                                 'getTime' => [
                                     'toNative' => [
-                                        'getTimestamp' => '05:54:40',
+                                        'getTimestamp' => '18:01:03',
                                     ],
                                 ],
                                 'toNativeDateTime' => [
-                                    'getTimestamp' => '03:38:09',
+                                    'getTimestamp' => '08:10:08',
                                 ],
                             ],
-                            'initializeState' => 'Washington',
-                            'getPlayhead' => 7,
-                        ],
-                        'store' => null,
-                    ],
-                    'ItemDeleteCommand' => [
-                        'getItemUuid' => [
-                            'toNative' => '9fa4a41c-85fb-354d-ac3f-f36f3167b081',
-                            'getUuid' => [
-                                'toString' => 'a2c145f7-ddc8-319d-b0b2-b6f2f0d3dccc',
+                            'setUpdatedAt' => '1984-12-26',
+                            'serialize' => [
+                                0 => 'neque',
+                                1 => 'eum',
+                                2 => 'omnis',
                             ],
-                            'sameValueAs' => true,
-                            'isEmpty' => true,
                         ],
                         'getProcessUuid' => [
-                            'toNative' => '2c18f043-a2ad-3cdb-90ea-e0ae5567838a',
+                            'toNative' => '0e91af69-2f89-3076-9dd5-c68811abc51a',
                             'getUuid' => [
-                                'toString' => 'a5dba9c9-96d0-3481-88ca-566d1cba822c',
+                                'toString' => 'd00b0ef7-c2ba-33d7-94c3-890461ac84bc',
                             ],
-                            'sameValueAs' => true,
-                            'isEmpty' => true,
+                            'sameValueAs' => false,
+                            'isEmpty' => false,
                         ],
                         'getUuid' => [
-                            'toString' => '431422ad-c867-3262-ac11-1f85710cda0f',
+                            'toString' => 'a90dd8e9-a86b-3593-b0c4-0cfc31501148',
                         ],
                     ],
                 ],
                 1 => [
-                    'ItemRepositoryInterface' => [
+                    'ItemTaskRepositoryInterface' => [
                         'times' => 0,
-                        'get' => [
-                            'times' => 1,
-                            'addId' => 0,
-                            'delete' => 1,
-                            'getUuid' => [
-                                'times' => 0,
-                                'toNative' => 0,
-                                'getUuid' => [
-                                    'times' => 0,
-                                    'toString' => 0,
-                                ],
-                                'sameValueAs' => 0,
-                                'isEmpty' => 0,
-                            ],
-                            'getId' => [
-                                'times' => 0,
-                                'sameValueAs' => 0,
-                                'toNative' => 0,
-                            ],
-                            'getParentId' => [
-                                'times' => 0,
-                                'sameValueAs' => 0,
-                                'toNative' => 0,
-                            ],
-                            'getName' => [
-                                'times' => 0,
-                                'toNative' => 0,
-                                'sameValueAs' => 0,
-                                'isEmpty' => 0,
-                            ],
-                            'getStatus' => [
-                                'times' => 0,
-                                'isActive' => 0,
-                                'sameValueAs' => 0,
-                                'toNative' => 0,
-                            ],
-                            'getUrl' => [
-                                'times' => 0,
-                                'toNative' => 0,
-                                'sameValueAs' => 0,
-                                'isEmpty' => 0,
-                            ],
-                            'getCreatedAt' => [
-                                'times' => 0,
-                                'toNative' => [
-                                    'times' => 0,
-                                    'getTimestamp' => 0,
-                                ],
-                            ],
-                            'getUpdatedAt' => [
-                                'times' => 0,
-                                'toNative' => [
-                                    'times' => 0,
-                                    'getTimestamp' => 0,
-                                ],
-                                'sameValueAs' => 0,
-                                'getDate' => [
-                                    'times' => 0,
-                                    'toNative' => [
-                                        'times' => 0,
-                                        'getTimestamp' => 0,
-                                    ],
-                                ],
-                                'getTime' => [
-                                    'times' => 0,
-                                    'toNative' => [
-                                        'times' => 0,
-                                        'getTimestamp' => 0,
-                                    ],
-                                ],
-                                'toNativeDateTime' => [
-                                    'times' => 0,
-                                    'getTimestamp' => 0,
-                                ],
-                            ],
-                            'initializeState' => 0,
-                            'getPlayhead' => 0,
-                        ],
-                        'store' => 1,
+                        'addCreateTask' => 0,
+                        'addUpdateTask' => 1,
+                        'addDeleteTask' => 0,
                     ],
-                    'ItemDeleteCommand' => [
+                    'ItemUpdateTaskCommand' => [
                         'times' => 0,
                         'getItemUuid' => [
                             'times' => 1,
@@ -1000,8 +985,83 @@ class ItemDeleteHandlerDataProvider
                             'sameValueAs' => 0,
                             'isEmpty' => 0,
                         ],
+                        'getItem' => [
+                            'times' => 1,
+                            'toArray' => 0,
+                            'sameValueAs' => 0,
+                            'toNative' => 0,
+                            'getId' => [
+                                'times' => 0,
+                                'sameValueAs' => 0,
+                                'toNative' => 0,
+                            ],
+                            'setId' => 0,
+                            'getParentId' => [
+                                'times' => 0,
+                                'sameValueAs' => 0,
+                                'toNative' => 0,
+                            ],
+                            'setParentId' => 0,
+                            'getName' => [
+                                'times' => 0,
+                                'toNative' => 0,
+                                'sameValueAs' => 0,
+                                'isEmpty' => 0,
+                            ],
+                            'setName' => 0,
+                            'getStatus' => [
+                                'times' => 0,
+                                'isActive' => 0,
+                                'sameValueAs' => 0,
+                                'toNative' => 0,
+                            ],
+                            'setStatus' => 0,
+                            'getUrl' => [
+                                'times' => 0,
+                                'toNative' => 0,
+                                'sameValueAs' => 0,
+                                'isEmpty' => 0,
+                            ],
+                            'setUrl' => 0,
+                            'getCreatedAt' => [
+                                'times' => 0,
+                                'toNative' => [
+                                    'times' => 0,
+                                    'getTimestamp' => 0,
+                                ],
+                            ],
+                            'setCreatedAt' => 0,
+                            'getUpdatedAt' => [
+                                'times' => 0,
+                                'toNative' => [
+                                    'times' => 0,
+                                    'getTimestamp' => 0,
+                                ],
+                                'sameValueAs' => 0,
+                                'getDate' => [
+                                    'times' => 0,
+                                    'toNative' => [
+                                        'times' => 0,
+                                        'getTimestamp' => 0,
+                                    ],
+                                ],
+                                'getTime' => [
+                                    'times' => 0,
+                                    'toNative' => [
+                                        'times' => 0,
+                                        'getTimestamp' => 0,
+                                    ],
+                                ],
+                                'toNativeDateTime' => [
+                                    'times' => 0,
+                                    'getTimestamp' => 0,
+                                ],
+                            ],
+                            'setUpdatedAt' => 0,
+                            'serialize' => 0,
+                        ],
                         'getProcessUuid' => [
-                            'times' => 0,
+                            'times' => 1,
                             'toNative' => 0,
                             'getUuid' => [
                                 'times' => 0,

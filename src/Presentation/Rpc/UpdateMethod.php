@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Backend\Api\RpcSkeleton\Presentation\Rpc;
 
+use Backend\Api\RpcSkeleton\Application\Dto\ItemDto;
+use Backend\Api\RpcSkeleton\Application\Factory\CommandFactory;
+use Backend\Api\RpcSkeleton\Domain\Service\JsonRpcMethodWithDocInterface;
 use Exception;
 use League\Tactician\CommandBus;
-use Backend\Api\RpcSkeleton\Domain\Factory\CommandFactory;
-use Backend\Api\RpcSkeleton\Application\Dto\ItemDto;
-use Backend\Api\RpcSkeleton\Domain\Service\JsonRpcMethodWithDocInterface;
 use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\Constraints\Choice;
 use Symfony\Component\Validator\Constraints\Collection;

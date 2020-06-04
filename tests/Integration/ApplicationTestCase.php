@@ -2,22 +2,25 @@
 
 declare(strict_types=1);
 
-namespace Backend\Api\RpcSkeleton\Tests\Integration\Application;
+namespace Backend\Api\RpcSkeleton\Tests\Integration;
 
-use MicroModule\Base\Domain\Factory\CommandFactoryInterface;
-use MicroModule\Base\Domain\Exception\InvalidDataException;
-use League\Tactician\CommandBus;
 use Backend\Api\RpcSkeleton\Tests\Helper\EntityMockTrait;
 use Backend\Api\RpcSkeleton\Tests\Helper\EventMockTrait;
 use Backend\Api\RpcSkeleton\Tests\Helper\ValueObjectMockTrait;
+use Broadway\Domain\DomainMessage;
+use Broadway\Saga\Testing\EventCollectorListener;
+use League\Tactician\CommandBus;
+use MicroModule\Base\Domain\Exception\InvalidDataException;
+use MicroModule\Base\Domain\Factory\CommandFactoryInterface;
 use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
+use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 
 /**
  * Class ApplicationTestCase.
  *
  * @category Tests\Unit\Application
  */
-abstract class ApplicationTestCase extends AbstractApplicationTestCase
+abstract class ApplicationTestCase extends KernelTestCase
 {
     use ValueObjectMockTrait, EntityMockTrait, EventMockTrait, MockeryPHPUnitIntegration;
 
@@ -52,7 +55,6 @@ abstract class ApplicationTestCase extends AbstractApplicationTestCase
     /**
      * {@inheritdoc}
      *
-     * @throws InvalidDataException
      * @throws InvalidDataException
      */
     protected function setUp(): void
@@ -108,5 +110,28 @@ abstract class ApplicationTestCase extends AbstractApplicationTestCase
     protected function handle(object $command): void
     {
         $this->commandBus->handle($command);
+    }
+
+    /**
+     * Get and return service from Service Container.
+     *
+     * @param string $serviceId
+     *
+     * @return null|object
+     */
+    protected function service(string $serviceId)
+    {
+        return self::$container->get($serviceId);
+    }
+
+    /**
+     * @return DomainMessage[]
+     */
+    protected function getEvents(): array
+    {
+        /** @var EventCollectorListener $eventCollector */
+        $eventCollector = $this->service(EventCollectorListener::class);
+
+        return $eventCollector->popEvents();
     }
 }

@@ -4,9 +4,7 @@ declare(strict_types=1);
 
 namespace Backend\Api\RpcSkeleton\Tests\Unit\Application\Factory;
 
-use MicroModule\Base\Domain\Command\CommandInterface;
-use MicroModule\Base\Domain\Exception\FactoryException;
-use Exception;
+use Backend\Api\RpcSkeleton\Application\Factory\CommandFactory;
 use Backend\Api\RpcSkeleton\Domain\Command\ItemAddIdCommand;
 use Backend\Api\RpcSkeleton\Domain\Command\ItemCreateCommand;
 use Backend\Api\RpcSkeleton\Domain\Command\ItemCreateTaskCommand;
@@ -14,12 +12,14 @@ use Backend\Api\RpcSkeleton\Domain\Command\ItemDeleteCommand;
 use Backend\Api\RpcSkeleton\Domain\Command\ItemDeleteTaskCommand;
 use Backend\Api\RpcSkeleton\Domain\Command\ItemUpdateCommand;
 use Backend\Api\RpcSkeleton\Domain\Command\ItemUpdateTaskCommand;
-use Backend\Api\RpcSkeleton\Domain\Factory\CommandFactory;
-use Backend\Api\RpcSkeleton\Domain\QueryHandler\FetchOneCommand;
-use Backend\Api\RpcSkeleton\Domain\QueryHandler\FindCommand;
+use Backend\Api\RpcSkeleton\Domain\Query\FetchOneCommand;
+use Backend\Api\RpcSkeleton\Domain\Query\FindCommand;
 use Backend\Api\RpcSkeleton\Tests\Unit\Mock\Application\DtoMockHelper;
 use Backend\Api\RpcSkeleton\Tests\Unit\Mock\Domain\ValueObjectMockHelper;
 use Backend\Api\RpcSkeleton\Tests\Unit\UnitTestCase;
+use Exception;
+use MicroModule\Base\Domain\Command\CommandInterface;
+use MicroModule\Base\Domain\Exception\FactoryException;
 
 /**
  * Test for class CommandFactory.
@@ -37,8 +37,8 @@ class CommandFactoryTest extends UnitTestCase
      *
      * @group unit
      *
-     * @covers       \Backend\Api\RpcSkeleton\Domain\Factory\CommandFactory::makeCommandInstanceByType
-     * @covers       \Backend\Api\RpcSkeleton\Domain\Factory\CommandFactory::makeFetchOneCommand
+     * @covers       \Backend\Api\RpcSkeleton\Application\Factory\CommandFactory::makeCommandInstanceByType
+     * @covers       \Backend\Api\RpcSkeleton\Application\Factory\CommandFactory::makeFetchOneCommand
      *
      * @dataProvider \Backend\Api\RpcSkeleton\Tests\Unit\DataProvider\Application\Factory\CommandFactoryDataProvider::getDataForMakeFetchOneCommandMethod()
      *
@@ -65,8 +65,8 @@ class CommandFactoryTest extends UnitTestCase
      *
      * @group unit
      *
-     * @covers       \Backend\Api\RpcSkeleton\Domain\Factory\CommandFactory::makeCommandInstanceByType
-     * @covers       \Backend\Api\RpcSkeleton\Domain\Factory\CommandFactory::makeFindCommand
+     * @covers       \Backend\Api\RpcSkeleton\Application\Factory\CommandFactory::makeCommandInstanceByType
+     * @covers       \Backend\Api\RpcSkeleton\Application\Factory\CommandFactory::makeFindCommand
      *
      * @dataProvider \Backend\Api\RpcSkeleton\Tests\Unit\DataProvider\Application\Factory\CommandFactoryDataProvider::getDataForMakeFindCommandMethod()
      *
@@ -93,8 +93,8 @@ class CommandFactoryTest extends UnitTestCase
      *
      * @group unit
      *
-     * @covers       \Backend\Api\RpcSkeleton\Domain\Factory\CommandFactory::makeCommandInstanceByType
-     * @covers       \Backend\Api\RpcSkeleton\Domain\Factory\CommandFactory::makeItemCreateTaskCommand
+     * @covers       \Backend\Api\RpcSkeleton\Application\Factory\CommandFactory::makeCommandInstanceByType
+     * @covers       \Backend\Api\RpcSkeleton\Application\Factory\CommandFactory::makeItemCreateTaskCommand
      *
      * @dataProvider \Backend\Api\RpcSkeleton\Tests\Unit\DataProvider\Application\Factory\CommandFactoryDataProvider::getDataForMakeItemCreateTaskCommandMethod()
      *
@@ -122,8 +122,8 @@ class CommandFactoryTest extends UnitTestCase
      *
      * @group unit
      *
-     * @covers       \Backend\Api\RpcSkeleton\Domain\Factory\CommandFactory::makeCommandInstanceByType
-     * @covers       \Backend\Api\RpcSkeleton\Domain\Factory\CommandFactory::makeItemUpdateTaskCommand
+     * @covers       \Backend\Api\RpcSkeleton\Application\Factory\CommandFactory::makeCommandInstanceByType
+     * @covers       \Backend\Api\RpcSkeleton\Application\Factory\CommandFactory::makeItemUpdateTaskCommand
      *
      * @dataProvider \Backend\Api\RpcSkeleton\Tests\Unit\DataProvider\Application\Factory\CommandFactoryDataProvider::getDataForMakeItemUpdateTaskCommandMethod()
      *
@@ -152,8 +152,8 @@ class CommandFactoryTest extends UnitTestCase
      *
      * @group unit
      *
-     * @covers       \Backend\Api\RpcSkeleton\Domain\Factory\CommandFactory::makeCommandInstanceByType
-     * @covers       \Backend\Api\RpcSkeleton\Domain\Factory\CommandFactory::makeItemDeleteTaskCommand
+     * @covers       \Backend\Api\RpcSkeleton\Application\Factory\CommandFactory::makeCommandInstanceByType
+     * @covers       \Backend\Api\RpcSkeleton\Application\Factory\CommandFactory::makeItemDeleteTaskCommand
      *
      * @dataProvider \Backend\Api\RpcSkeleton\Tests\Unit\DataProvider\Application\Factory\CommandFactoryDataProvider::getDataForMakeItemDeleteTaskCommandMethod()
      *
@@ -180,8 +180,8 @@ class CommandFactoryTest extends UnitTestCase
      *
      * @group unit
      *
-     * @covers       \Backend\Api\RpcSkeleton\Domain\Factory\CommandFactory::makeCommandInstanceByType
-     * @covers       \Backend\Api\RpcSkeleton\Domain\Factory\CommandFactory::makeItemCreateCommand
+     * @covers       \Backend\Api\RpcSkeleton\Application\Factory\CommandFactory::makeCommandInstanceByType
+     * @covers       \Backend\Api\RpcSkeleton\Application\Factory\CommandFactory::makeItemCreateCommand
      *
      * @dataProvider \Backend\Api\RpcSkeleton\Tests\Unit\DataProvider\Application\Factory\CommandFactoryDataProvider::getDataForMakeItemCreateCommandMethod()
      *
@@ -209,8 +209,8 @@ class CommandFactoryTest extends UnitTestCase
      *
      * @group unit
      *
-     * @covers       \Backend\Api\RpcSkeleton\Domain\Factory\CommandFactory::makeCommandInstanceByType
-     * @covers       \Backend\Api\RpcSkeleton\Domain\Factory\CommandFactory::makeItemUpdateCommand
+     * @covers       \Backend\Api\RpcSkeleton\Application\Factory\CommandFactory::makeCommandInstanceByType
+     * @covers       \Backend\Api\RpcSkeleton\Application\Factory\CommandFactory::makeItemUpdateCommand
      *
      * @dataProvider \Backend\Api\RpcSkeleton\Tests\Unit\DataProvider\Application\Factory\CommandFactoryDataProvider::getDataForMakeItemUpdateCommandMethod()
      *
@@ -239,8 +239,8 @@ class CommandFactoryTest extends UnitTestCase
      *
      * @group unit
      *
-     * @covers       \Backend\Api\RpcSkeleton\Domain\Factory\CommandFactory::makeCommandInstanceByType
-     * @covers       \Backend\Api\RpcSkeleton\Domain\Factory\CommandFactory::makeItemDeleteCommand
+     * @covers       \Backend\Api\RpcSkeleton\Application\Factory\CommandFactory::makeCommandInstanceByType
+     * @covers       \Backend\Api\RpcSkeleton\Application\Factory\CommandFactory::makeItemDeleteCommand
      *
      * @dataProvider \Backend\Api\RpcSkeleton\Tests\Unit\DataProvider\Application\Factory\CommandFactoryDataProvider::getDataForMakeItemDeleteCommandMethod()
      *
@@ -268,7 +268,7 @@ class CommandFactoryTest extends UnitTestCase
      *
      * @group unit
      *
-     * @covers       \Backend\Api\RpcSkeleton\Domain\Factory\CommandFactory::makeItemAddIdCommand
+     * @covers       \Backend\Api\RpcSkeleton\Application\Factory\CommandFactory::makeItemAddIdCommand
      *
      * @dataProvider \Backend\Api\RpcSkeleton\Tests\Unit\DataProvider\Application\Factory\CommandFactoryDataProvider::getDataForMakeItemAddIdCommandMethod()
      *

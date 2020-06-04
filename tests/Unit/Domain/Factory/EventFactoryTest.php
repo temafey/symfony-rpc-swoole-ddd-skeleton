@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Backend\Api\RpcSkeleton\Tests\Unit\Domain\Factory;
 
-use Broadway\Domain\DomainEventStream;
 use Backend\Api\RpcSkeleton\Domain\Event\ItemIdWasAddedEvent;
 use Backend\Api\RpcSkeleton\Domain\Event\ItemIdWasCreatedEvent;
 use Backend\Api\RpcSkeleton\Domain\Event\ItemWasCreatedEvent;
@@ -14,6 +13,7 @@ use Backend\Api\RpcSkeleton\Domain\Factory\EventFactory;
 use Backend\Api\RpcSkeleton\Tests\Unit\Mock\Domain\EventMockHelper;
 use Backend\Api\RpcSkeleton\Tests\Unit\Mock\Domain\ValueObjectMockHelper;
 use Backend\Api\RpcSkeleton\Tests\Unit\UnitTestCase;
+use Broadway\Domain\DomainEventStream;
 
 /**
  * Test for class EventFactory.

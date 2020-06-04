@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Backend\Api\RpcSkeleton\Tests\Helper;
 
-use InvalidArgumentException;
 use Backend\Api\RpcSkeleton\Domain\Entity\ItemEntity;
 use Backend\Api\RpcSkeleton\Domain\Repository\ItemRepositoryInterface;
 use Backend\Api\RpcSkeleton\Domain\ValueObject\Uuid;
+use InvalidArgumentException;
 use Mockery;
 use Mockery\MockInterface;
 

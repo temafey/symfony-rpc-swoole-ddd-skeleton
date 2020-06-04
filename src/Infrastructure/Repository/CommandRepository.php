@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Backend\Api\RpcSkeleton\Infrastructure\Repository;
 
-use MicroModule\Base\Utils\LoggerTrait;
 use Backend\Api\RpcSkeleton\Domain\Entity\ItemEntity;
 use Backend\Api\RpcSkeleton\Domain\Exception\ItemDeleteException;
 use Backend\Api\RpcSkeleton\Domain\Exception\ItemInsertException;
@@ -12,6 +11,7 @@ use Backend\Api\RpcSkeleton\Domain\Exception\ItemUpdateException;
 use Backend\Api\RpcSkeleton\Domain\Repository\CommandRepositoryInterface;
 use Backend\Api\RpcSkeleton\Domain\Repository\ReadModelStoreInterface;
 use Backend\Api\RpcSkeleton\Infrastructure\Repository\Storage\NotFoundException;
+use MicroModule\Base\Utils\LoggerTrait;
 
 /**
  * Class CommandRepository.

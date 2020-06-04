@@ -4,15 +4,15 @@ declare(strict_types=1);
 
 namespace Backend\Api\RpcSkeleton\Tests\Unit\Domain\ValueObject;
 
+use Backend\Api\RpcSkeleton\Domain\ValueObject\UpdatedAt;
+use Backend\Api\RpcSkeleton\Tests\Unit\Mock\Domain\ValueObjectMockHelper;
+use Backend\Api\RpcSkeleton\Tests\Unit\UnitTestCase;
+use DateTime;
+use Exception;
 use MicroModule\ValueObject\DateTime\Date;
 use MicroModule\ValueObject\DateTime\Exception\InvalidDateException;
 use MicroModule\ValueObject\DateTime\Time;
 use MicroModule\ValueObject\ValueObjectInterface;
-use DateTime;
-use Exception;
-use Backend\Api\RpcSkeleton\Domain\ValueObject\UpdatedAt;
-use Backend\Api\RpcSkeleton\Tests\Unit\Mock\Domain\ValueObjectMockHelper;
-use Backend\Api\RpcSkeleton\Tests\Unit\UnitTestCase;
 use Mockery;
 
 /**

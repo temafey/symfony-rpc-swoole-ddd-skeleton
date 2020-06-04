@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Backend\Api\RpcSkeleton\Tests\Unit\DataProvider\Domain\Query;
+namespace Backend\Api\RpcSkeleton\Tests\Unit\DataProvider\Application\QueryHandler;
 
 /**
  * DataProvider for class {testClassName}.
@@ -448,7 +448,7 @@ class FindHandlerDataProvider
                             'setCreatedAt' => 0,
                             'getUpdatedAt' => 0,
                             'setUpdatedAt' => 0,
-                            'className' => 'MasterData\\Api\\RpcSkeleton\\Domain\\Dto\\ItemDto',
+                            'className' => 'Backend\\\Api\\RpcSkeleton\\Domain\\Dto\\ItemDto',
                         ],
                     ],
                     'FindCommand' => [
@@ -905,7 +905,7 @@ class FindHandlerDataProvider
                             'setCreatedAt' => 0,
                             'getUpdatedAt' => 0,
                             'setUpdatedAt' => 0,
-                            'className' => 'MasterData\\Api\\RpcSkeleton\\Domain\\Dto\\ItemDto',
+                            'className' => 'Backend\\\Api\\RpcSkeleton\\Domain\\Dto\\ItemDto',
                         ],
                     ],
                     'FindCommand' => [
@@ -1362,7 +1362,7 @@ class FindHandlerDataProvider
                             'setCreatedAt' => 0,
                             'getUpdatedAt' => 0,
                             'setUpdatedAt' => 0,
-                            'className' => 'MasterData\\Api\\RpcSkeleton\\Domain\\Dto\\ItemDto',
+                            'className' => 'Backend\\\Api\\RpcSkeleton\\Domain\\Dto\\ItemDto',
                         ],
                     ],
                     'FindCommand' => [

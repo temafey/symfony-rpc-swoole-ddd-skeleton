@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Backend\Api\RpcSkeleton\Domain\Event;
 
-use MicroModule\ValueObject\Identity\UUID as ProcessUuid;
 use Assert\Assertion;
 use Assert\AssertionFailedException;
-use Exception;
 use Backend\Api\RpcSkeleton\Domain\ValueObject\Status;
 use Backend\Api\RpcSkeleton\Domain\ValueObject\Uuid;
+use Exception;
+use MicroModule\ValueObject\Identity\UUID as ProcessUuid;
 
 /**
  * Class ItemStatusWasUpdatedEvent.
@@ -17,7 +17,7 @@ use Backend\Api\RpcSkeleton\Domain\ValueObject\Uuid;
  * @category Domain\Event
  * @sub-package Item
  */
-class ItemStatusWasUpdatedEvent extends ItemEvent
+final class ItemStatusWasUpdatedEvent extends ItemEvent
 {
     /**
      * Status ValueObject.

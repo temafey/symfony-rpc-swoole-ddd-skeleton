@@ -8,7 +8,7 @@ services:
     arguments:
       - '@Enqueue\JobQueue\JobRunner'
       - '@tactician.commandbus.command.create.item'
-      - '@Backend\Api\RpcSkeleton\Domain\Factory\CommandFactory'
+      - '@Backend\Api\RpcSkeleton\Application\Factory\CommandFactory'
       - '@broadway.event_dispatcher'
     calls:
       - [setLogger, ['@logger']]

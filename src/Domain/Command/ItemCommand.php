@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Backend\Api\RpcSkeleton\Domain\Command;
 
+use Exception;
 use MicroModule\Base\Domain\Command\CommandInterface;
 use MicroModule\ValueObject\Identity\UUID;
-use Exception;
 use Ramsey\Uuid\UuidInterface;
 
 /**

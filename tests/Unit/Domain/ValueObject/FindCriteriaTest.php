@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Backend\Api\RpcSkeleton\Tests\Unit\Domain\ValueObject;
 
-use MicroModule\ValueObject\Structure\Collection;
-use InvalidArgumentException;
 use Backend\Api\RpcSkeleton\Domain\ValueObject\FindCriteria;
 use Backend\Api\RpcSkeleton\Tests\Unit\Mock\Domain\ValueObjectMockHelper;
 use Backend\Api\RpcSkeleton\Tests\Unit\UnitTestCase;
+use InvalidArgumentException;
+use MicroModule\ValueObject\Structure\Collection;
 
 /**
  * Test for class FindCriteria.

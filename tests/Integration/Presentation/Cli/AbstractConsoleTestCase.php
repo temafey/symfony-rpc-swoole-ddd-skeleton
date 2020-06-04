@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Backend\Api\RpcSkeleton\Tests\Integration\Presentation\Cli;
 
-use Backend\Api\RpcSkeleton\Tests\Integration\Application\ApplicationTestCase;
+use Backend\Api\RpcSkeleton\Tests\Integration\ApplicationTestCase;
 use Symfony\Bundle\FrameworkBundle\Console\Application;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Tester\CommandTester;

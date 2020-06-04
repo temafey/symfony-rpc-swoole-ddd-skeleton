@@ -4,14 +4,14 @@ declare(strict_types=1);
 
 namespace Backend\Api\RpcSkeleton\Tests\Unit\Application\CommandHandler;
 
-use Exception;
 use Backend\Api\RpcSkeleton\Application\CommandHandler\ItemCreateHandler;
-use Backend\Api\RpcSkeleton\Tests\Unit\Mock\Application\CommandMockHelper;
+use Backend\Api\RpcSkeleton\Tests\Unit\Mock\Domain\CommandMockHelper;
 use Backend\Api\RpcSkeleton\Tests\Unit\Mock\Domain\EntityMockHelper;
 use Backend\Api\RpcSkeleton\Tests\Unit\Mock\Domain\FactoryMockHelper;
 use Backend\Api\RpcSkeleton\Tests\Unit\Mock\Domain\RepositoryMockHelper;
 use Backend\Api\RpcSkeleton\Tests\Unit\Mock\Domain\ValueObjectMockHelper;
 use Backend\Api\RpcSkeleton\Tests\Unit\UnitTestCase;
+use Exception;
 
 /**
  * Test for class ItemCreateHandler.
@@ -32,7 +32,7 @@ class ItemCreateHandlerTest extends UnitTestCase
      * @covers       \Backend\Api\RpcSkeleton\Application\CommandHandler\ItemCreateHandler::__construct
      * @covers       \Backend\Api\RpcSkeleton\Application\CommandHandler\ItemCreateHandler::handle
      *
-     * @dataProvider \Backend\Api\RpcSkeleton\Tests\Unit\DataProvider\ApplicationCommandHandler$1HandlerDataProvider::getDataForHandleMethod()
+     * @dataProvider \Backend\Api\RpcSkeleton\Tests\Unit\DataProvider\Application\CommandHandler\ItemCreateHandlerDataProvider::getDataForHandleMethod()
      *
      * @param mixed[] $mockArgs
      * @param mixed[] $mockTimes

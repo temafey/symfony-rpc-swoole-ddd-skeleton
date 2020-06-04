@@ -4,10 +4,6 @@ declare(strict_types=1);
 
 namespace Backend\Api\RpcSkeleton\Domain\Factory;
 
-use MicroModule\ValueObject\Identity\UUID as ProcessUuid;
-use Broadway\Domain\DomainEventStream;
-use Broadway\Domain\DomainMessage;
-use Broadway\Domain\Metadata;
 use Backend\Api\RpcSkeleton\Domain\Event\ItemEvent;
 use Backend\Api\RpcSkeleton\Domain\Event\ItemIdWasAddedEvent;
 use Backend\Api\RpcSkeleton\Domain\Event\ItemIdWasCreatedEvent;
@@ -17,6 +13,10 @@ use Backend\Api\RpcSkeleton\Domain\Event\ItemWasUpdatedEvent;
 use Backend\Api\RpcSkeleton\Domain\ValueObject\Id;
 use Backend\Api\RpcSkeleton\Domain\ValueObject\Item;
 use Backend\Api\RpcSkeleton\Domain\ValueObject\Uuid;
+use Broadway\Domain\DomainEventStream;
+use Broadway\Domain\DomainMessage;
+use Broadway\Domain\Metadata;
+use MicroModule\ValueObject\Identity\UUID as ProcessUuid;
 
 /**
  * Class EventFactory.

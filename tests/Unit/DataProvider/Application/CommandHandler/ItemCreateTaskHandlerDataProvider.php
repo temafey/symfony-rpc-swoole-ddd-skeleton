@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Backend\Api\RpcSkeleton\Tests\Unit\DataProvider\Domain\Command;
+namespace Backend\Api\RpcSkeleton\Tests\Unit\DataProvider\Application\CommandHandler;
 
 /**
  * DataProvider for class {testClassName}.

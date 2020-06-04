@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Backend\Api\RpcSkeleton\Infrastructure\Repository;
 
+use Backend\Api\RpcSkeleton\Domain\Entity\ItemEntity;
 use Broadway\EventHandling\EventBus;
 use Broadway\EventSourcing\AggregateFactory\PublicConstructorAggregateFactory;
 use Broadway\EventSourcing\EventSourcingRepository;
 use Broadway\EventSourcing\EventStreamDecorator;
 use Broadway\EventStore\EventStore;
-use Backend\Api\RpcSkeleton\Domain\Entity\ItemEntity;
 
 /**
  * Class ItemEventSourcingStoreRepository.

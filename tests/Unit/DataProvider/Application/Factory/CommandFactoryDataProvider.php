@@ -10,7 +10,7 @@ namespace Backend\Api\RpcSkeleton\Tests\Unit\DataProvider\Application\Factory;
 class CommandFactoryDataProvider
 {
     /**
-     * Return test data for Backend\Api\RpcSkeleton\Domain\Factory\CommandFactory.
+     * Return test data for Backend\Api\RpcSkeleton\Application\Factory\CommandFactory.
      *
      * @return mixed[]
      */
@@ -61,7 +61,7 @@ class CommandFactoryDataProvider
     }
 
     /**
-     * Return test data for Backend\Api\RpcSkeleton\Domain\Factory\CommandFactory.
+     * Return test data for Backend\Api\RpcSkeleton\Application\Factory\CommandFactory.
      *
      * @return mixed[]
      */
@@ -112,7 +112,7 @@ class CommandFactoryDataProvider
     }
 
     /**
-     * Return test data for Backend\Api\RpcSkeleton\Domain\Factory\CommandFactory.
+     * Return test data for Backend\Api\RpcSkeleton\Application\Factory\CommandFactory.
      *
      * @return mixed[]
      */
@@ -183,7 +183,7 @@ class CommandFactoryDataProvider
     }
 
     /**
-     * Return test data for Backend\Api\RpcSkeleton\Domain\Factory\CommandFactory.
+     * Return test data for Backend\Api\RpcSkeleton\Application\Factory\CommandFactory.
      *
      * @return mixed[]
      */
@@ -429,7 +429,7 @@ class CommandFactoryDataProvider
     }
 
     /**
-     * Return test data for Backend\Api\RpcSkeleton\Domain\Factory\CommandFactory.
+     * Return test data for Backend\Api\RpcSkeleton\Application\Factory\CommandFactory.
      *
      * @return mixed[]
      */
@@ -685,7 +685,7 @@ class CommandFactoryDataProvider
     }
 
     /**
-     * Return test data for Backend\Api\RpcSkeleton\Domain\Factory\CommandFactory.
+     * Return test data for Backend\Api\RpcSkeleton\Application\Factory\CommandFactory.
      *
      * @return mixed[]
      */
@@ -736,7 +736,7 @@ class CommandFactoryDataProvider
     }
 
     /**
-     * Return test data for Backend\Api\RpcSkeleton\Domain\Factory\CommandFactory.
+     * Return test data for Backend\Api\RpcSkeleton\Application\Factory\CommandFactory.
      *
      * @return mixed[]
      */
@@ -832,7 +832,7 @@ class CommandFactoryDataProvider
     }
 
     /**
-     * Return test data for Backend\Api\RpcSkeleton\Domain\Factory\CommandFactory.
+     * Return test data for Backend\Api\RpcSkeleton\Application\Factory\CommandFactory.
      *
      * @return mixed[]
      */
@@ -1018,7 +1018,7 @@ class CommandFactoryDataProvider
     }
 
     /**
-     * Return test data for Backend\Api\RpcSkeleton\Domain\Factory\CommandFactory.
+     * Return test data for Backend\Api\RpcSkeleton\Application\Factory\CommandFactory.
      *
      * @return mixed[]
      */
@@ -1159,7 +1159,7 @@ class CommandFactoryDataProvider
     }
 
     /**
-     * Return test data for Backend\Api\RpcSkeleton\Domain\Factory\CommandFactory.
+     * Return test data for Backend\Api\RpcSkeleton\Application\Factory\CommandFactory.
      *
      * @return mixed[]
      */

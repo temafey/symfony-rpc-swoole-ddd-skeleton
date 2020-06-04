@@ -69,10 +69,10 @@ final class InMemoryReadModelStore implements ReadModelStoreInterface
      * an UnexpectedValueException if certain values of the sorting or limiting details are
      * not supported.
      *
-     * @param mixed[]       $criteria
-     * @param string[]|null $orderBy
-     * @param int|null      $limit
-     * @param int|null      $offset
+     * @param array      $criteria
+     * @param array|null $orderBy
+     * @param int|null   $limit
+     * @param int|null   $offset
      *
      * @return mixed[]
      *
@@ -80,7 +80,7 @@ final class InMemoryReadModelStore implements ReadModelStoreInterface
      *
      * @suppress PhanUnusedPublicFinalMethodParameter
      */
-    public function findBy(array $criteria, ?array $orderBy = null, $limit = null, $offset = null): array
+    public function findBy(array $criteria, ?array $orderBy = null, ?int $limit = null, ?int $offset = null): array
     {
         return $this->items;
     }

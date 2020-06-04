@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Backend\Api\RpcSkeleton\Tests\Unit\Domain\Entity;
 
-use Exception;
 use Backend\Api\RpcSkeleton\Domain\Entity\ItemEntity;
 use Backend\Api\RpcSkeleton\Domain\Event\ItemIdWasAddedEvent;
 use Backend\Api\RpcSkeleton\Domain\Event\ItemWasCreatedEvent;
@@ -16,6 +15,7 @@ use Backend\Api\RpcSkeleton\Tests\Unit\Mock\Domain\EventMockHelper;
 use Backend\Api\RpcSkeleton\Tests\Unit\Mock\Domain\FactoryMockHelper;
 use Backend\Api\RpcSkeleton\Tests\Unit\Mock\Domain\ValueObjectMockHelper;
 use Backend\Api\RpcSkeleton\Tests\Unit\UnitTestCase;
+use Exception;
 
 /**
  * Test for class ItemEntity.
@@ -76,6 +76,7 @@ class ItemEntityTest extends UnitTestCase
      *
      * @param mixed[] $mockArgs
      * @param mixed[] $mockTimes
+     *
      * @throws Exception
      */
     public function addIdShouldFireItemIdWasAddedEventTest(array $mockArgs, array $mockTimes): void
@@ -156,6 +157,7 @@ class ItemEntityTest extends UnitTestCase
      *
      * @param mixed[] $mockArgs
      * @param mixed[] $mockTimes
+     *
      * @throws Exception
      */
     public function deleteShouldFireItemWasDeletedEventTest(array $mockArgs, array $mockTimes): void

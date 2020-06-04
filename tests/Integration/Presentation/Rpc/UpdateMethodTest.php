@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Backend\Api\RpcSkeleton\Tests\Integration\Presentation\Rpc;
 
+use Backend\Api\RpcSkeleton\Application\Factory\CommandFactory;
 use MicroModule\Task\Application\Processor\JobCommandBusProcessor;
-use Backend\Api\RpcSkeleton\Domain\Factory\CommandFactory;
 
 /**
  * Class UpdateMethodTest.
@@ -25,10 +25,10 @@ class UpdateMethodTest extends AbstractRpcTestCase
      *
      * @param string $method
      * @param string $uri
-     * @param array $server
-     * @param array $params
-     * @param array $expected
-     * @param array $expectedCommandParams
+     * @param array  $server
+     * @param array  $params
+     * @param array  $expected
+     * @param array  $expectedCommandParams
      */
     public function requestToUpdateMethodShouldReturnTrueInResponse(
         string $method,

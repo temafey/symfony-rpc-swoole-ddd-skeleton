@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace Backend\Api\RpcSkeleton\Tests\Unit\Infrastructure\Repository\Storage;
 
-use Doctrine\DBAL\ConnectionException;
-use Doctrine\DBAL\DBALException;
 use Backend\Api\RpcSkeleton\Infrastructure\Repository\Storage\DBALEventStoreException as DBALEventStoreExceptionAlias;
 use Backend\Api\RpcSkeleton\Infrastructure\Repository\Storage\DBALReadModelStore;
 use Backend\Api\RpcSkeleton\Tests\Unit\Mock\Domain\EntityMockHelper;
 use Backend\Api\RpcSkeleton\Tests\Unit\Mock\Vendor\Doctrine\DBALVendorMockHelper;
 use Backend\Api\RpcSkeleton\Tests\Unit\UnitTestCase;
+use Doctrine\DBAL\ConnectionException;
+use Doctrine\DBAL\DBALException;
 
 /**
  * Test for class DBALReadModelStore.

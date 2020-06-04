@@ -10,6 +10,6 @@ namespace Backend\Api\RpcSkeleton\Domain\Event;
  * @category Domain\Event
  * @sub-package Item
  */
-class ItemWasDeletedEvent extends ItemEvent
+final class ItemWasDeletedEvent extends ItemEvent
 {
 }

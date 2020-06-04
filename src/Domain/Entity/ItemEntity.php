@@ -4,12 +4,6 @@ declare(strict_types=1);
 
 namespace Backend\Api\RpcSkeleton\Domain\Entity;
 
-use MicroModule\Snapshotting\EventSourcing\AggregateAssemblerInterface;
-use MicroModule\ValueObject\Identity\UUID as ProcessUuid;
-use MicroModule\ValueObject\ValueObjectInterface;
-use Broadway\EventSourcing\EventSourcedAggregateRoot;
-use DateTime;
-use Exception;
 use Backend\Api\RpcSkeleton\Domain\Event\ItemIdWasAddedEvent;
 use Backend\Api\RpcSkeleton\Domain\Event\ItemWasCreatedEvent;
 use Backend\Api\RpcSkeleton\Domain\Event\ItemWasDeletedEvent;
@@ -25,6 +19,12 @@ use Backend\Api\RpcSkeleton\Domain\ValueObject\Status;
 use Backend\Api\RpcSkeleton\Domain\ValueObject\UpdatedAt;
 use Backend\Api\RpcSkeleton\Domain\ValueObject\Url;
 use Backend\Api\RpcSkeleton\Domain\ValueObject\Uuid;
+use Broadway\EventSourcing\EventSourcedAggregateRoot;
+use DateTime;
+use Exception;
+use MicroModule\Snapshotting\EventSourcing\AggregateAssemblerInterface;
+use MicroModule\ValueObject\Identity\UUID as ProcessUuid;
+use MicroModule\ValueObject\ValueObjectInterface;
 
 /**
  * Class ItemEntity.
@@ -365,6 +365,8 @@ class ItemEntity extends EventSourcedAggregateRoot implements AggregateAssembler
      * @return Id
      *
      * @suppress PhanPartialTypeMismatchReturn
+     * @psalm-suppress InvalidNullableReturnType
+     * @psalm-suppress NullableReturnStatement
      */
     public function getId(): Id
     {

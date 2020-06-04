@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Backend\Api\RpcSkeleton\Application\Projector;
 
-use Broadway\EventHandling\EventBus;
-use Broadway\ReadModel\Projector;
 use Backend\Api\RpcSkeleton\Domain\Event\ItemEvent;
 use Backend\Api\RpcSkeleton\Domain\Event\ItemWasCreatedEvent;
 use Backend\Api\RpcSkeleton\Domain\Event\ItemWasDeletedEvent;
@@ -16,6 +14,8 @@ use Backend\Api\RpcSkeleton\Domain\Factory\EventFactory;
 use Backend\Api\RpcSkeleton\Domain\Factory\ItemFactory;
 use Backend\Api\RpcSkeleton\Domain\Repository\CommandRepositoryInterface;
 use Backend\Api\RpcSkeleton\Domain\Repository\QueryRepositoryInterface;
+use Broadway\EventHandling\EventBus;
+use Broadway\ReadModel\Projector;
 
 /**
  * Class ItemProjector.

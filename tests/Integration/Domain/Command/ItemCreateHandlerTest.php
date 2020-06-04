@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Backend\Api\RpcSkeleton\Tests\Integration\Domain\Command;
 
-use Exception;
 use Backend\Api\RpcSkeleton\Domain\Event\ItemIdWasCreatedEvent;
 use Backend\Api\RpcSkeleton\Domain\Event\ItemWasCreatedEvent;
+use Exception;
 
 /**
  * Class ItemCreateHandlerTest.

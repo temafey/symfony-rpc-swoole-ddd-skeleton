@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Backend\Api\RpcSkeleton\Domain\Event;
 
-use MicroModule\ValueObject\Identity\UUID as ProcessUuid;
 use Assert\Assertion;
 use Assert\AssertionFailedException;
+use Backend\Api\RpcSkeleton\Domain\ValueObject\Uuid;
 use Broadway\Serializer\Serializable;
 use Exception;
-use Backend\Api\RpcSkeleton\Domain\ValueObject\Uuid;
+use MicroModule\ValueObject\Identity\UUID as ProcessUuid;
 use RuntimeException;
 
 /**
@@ -71,7 +71,7 @@ abstract class ItemEvent implements Serializable
      *
      * @param mixed[] $data
      *
-     * @return $this
+     * @return static
      *
      * @throws AssertionFailedException
      * @throws Exception

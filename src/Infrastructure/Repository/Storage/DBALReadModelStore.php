@@ -4,14 +4,15 @@ declare(strict_types=1);
 
 namespace Backend\Api\RpcSkeleton\Infrastructure\Repository\Storage;
 
+use Backend\Api\RpcSkeleton\Domain\Entity\EntityInterface;
+use Backend\Api\RpcSkeleton\Domain\Repository\ReadModelStoreInterface;
 use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\ConnectionException;
 use Doctrine\DBAL\DBALException;
 use Doctrine\DBAL\Driver\Statement as DriverStatement;
+use Doctrine\DBAL\ParameterType;
 use Doctrine\DBAL\Schema\Schema;
 use Doctrine\DBAL\Schema\Table;
-use Backend\Api\RpcSkeleton\Domain\Entity\EntityInterface;
-use Backend\Api\RpcSkeleton\Domain\Repository\ReadModelStoreInterface;
 
 /**
  * Class DBALReadModelStore.
@@ -147,7 +148,7 @@ class DBALReadModelStore implements ReadModelStoreInterface
      *
      * @throws DBALException
      */
-    public function findBy(array $criteria, ?array $orderBy = null, $limit = null, $offset = null): array
+    public function findBy(array $criteria, ?array $orderBy = null, ?int $limit = null, ?int $offset = null): array
     {
         $query = 'SELECT ' . $this->primaryKey . ' , id, parent_id, name, status, url, created_at, updated_at
                 FROM ' . $this->tableName;
@@ -171,8 +172,8 @@ class DBALReadModelStore implements ReadModelStoreInterface
         }
         $statement = $this->connection->prepare($query);
 
-        foreach ($values as $i => $value) {
-            $statement->bindValue($i, $value);
+        foreach ($values as $param => $value) {
+            $statement->bindValue($param, $value, ParameterType::INTEGER);
         }
         $statement->execute();
 
@@ -192,9 +193,11 @@ class DBALReadModelStore implements ReadModelStoreInterface
     {
         $values = [];
         $conditions = [];
+        $valueKey = 0;
 
         foreach ($identifiers as $columnName => $value) {
-            $values[] = $value;
+            ++$valueKey;
+            $values[$valueKey] = $value;
             $conditions[] = $columnName . ' = ?';
         }
 

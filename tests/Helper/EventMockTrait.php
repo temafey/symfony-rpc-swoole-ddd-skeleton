@@ -4,14 +4,14 @@ declare(strict_types=1);
 
 namespace Backend\Api\RpcSkeleton\Tests\Helper;
 
-use MicroModule\ValueObject\Identity\UUID;
-use Broadway\Domain\DomainEventStream;
-use Broadway\Domain\DomainMessage;
-use Broadway\Domain\Metadata;
 use Backend\Api\RpcSkeleton\Domain\Event\ItemEvent;
 use Backend\Api\RpcSkeleton\Domain\Event\ItemWasCreatedEvent;
 use Backend\Api\RpcSkeleton\Domain\Factory\EventFactory;
 use Backend\Api\RpcSkeleton\Domain\ValueObject\Id;
+use Broadway\Domain\DomainEventStream;
+use Broadway\Domain\DomainMessage;
+use Broadway\Domain\Metadata;
+use MicroModule\ValueObject\Identity\UUID;
 use Mockery;
 use Mockery\MockInterface;
 
@@ -65,7 +65,7 @@ trait EventMockTrait
             });
 
             $makeEventMethod->andReturnUsing(static function (ItemEvent $event) {
-                $domainMessage = DomainMessage::recordNow($event->getId()->toNative(), 1, new Metadata([]), $event);
+                $domainMessage = DomainMessage::recordNow($event->getUuid()->toNative(), 1, new Metadata([]), $event);
 
                 return new DomainEventStream([$domainMessage]);
             }, $events['makeEventStream']);

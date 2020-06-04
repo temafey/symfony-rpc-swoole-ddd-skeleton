@@ -4,14 +4,14 @@ declare(strict_types=1);
 
 namespace Backend\Api\RpcSkeleton\Application\Saga;
 
-use MicroModule\Base\Domain\Factory\CommandFactoryInterface;
-use MicroModule\Saga\AbstractSaga;
+use Backend\Api\RpcSkeleton\Application\Factory\CommandFactory;
+use Backend\Api\RpcSkeleton\Domain\Event\ItemIdWasCreatedEvent;
 use Broadway\Saga\Metadata\StaticallyConfiguredSagaInterface;
 use Broadway\Saga\State;
 use Closure;
 use League\Tactician\CommandBus;
-use Backend\Api\RpcSkeleton\Domain\Factory\CommandFactory;
-use Backend\Api\RpcSkeleton\Domain\Event\ItemIdWasCreatedEvent;
+use MicroModule\Base\Domain\Factory\CommandFactoryInterface;
+use MicroModule\Saga\AbstractSaga;
 
 /**
  * Class ItemSaga.

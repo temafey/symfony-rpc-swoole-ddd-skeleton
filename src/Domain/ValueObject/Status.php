@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Backend\Api\RpcSkeleton\Domain\ValueObject;
 
-use MicroModule\ValueObject\Number\Integer;
 use Backend\Api\RpcSkeleton\Domain\Exception\StatusInvalidException;
+use MicroModule\ValueObject\Number\Integer;
 
 /**
  * Class Status.

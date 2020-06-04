@@ -4,16 +4,16 @@ declare(strict_types=1);
 
 namespace Backend\Api\RpcSkeleton\Tests\Unit\Infrastructure\Repository;
 
-use MicroModule\Snapshotting\EventSourcing\SnapshottingEventSourcingRepositoryException;
-use Broadway\Domain\AggregateRoot;
 use Backend\Api\RpcSkeleton\Domain\Entity\ItemEntity;
 use Backend\Api\RpcSkeleton\Infrastructure\Repository\ItemStoreRepository;
 use Backend\Api\RpcSkeleton\Tests\Unit\Mock\Domain\EntityMockHelper;
 use Backend\Api\RpcSkeleton\Tests\Unit\Mock\Domain\ValueObjectMockHelper;
-use Backend\Api\RpcSkeleton\Tests\Unit\Mock\Vendor\MicroModule\SnapshottingVendorMockHelper;
 use Backend\Api\RpcSkeleton\Tests\Unit\Mock\Vendor\Broadway\EventSourcingVendorMockHelper;
 use Backend\Api\RpcSkeleton\Tests\Unit\Mock\Vendor\Broadway\EventStoreVendorMockHelper;
+use Backend\Api\RpcSkeleton\Tests\Unit\Mock\Vendor\MicroModule\SnapshottingVendorMockHelper;
 use Backend\Api\RpcSkeleton\Tests\Unit\UnitTestCase;
+use Broadway\Domain\AggregateRoot;
+use MicroModule\Snapshotting\EventSourcing\SnapshottingEventSourcingRepositoryException;
 
 /**
  * Test for class ItemStoreRepository.

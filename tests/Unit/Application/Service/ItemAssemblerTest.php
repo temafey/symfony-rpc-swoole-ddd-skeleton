@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Backend\Api\RpcSkeleton\Tests\Unit\Application\Service;
 
-use Exception;
 use Backend\Api\RpcSkeleton\Application\Dto\ItemDto;
 use Backend\Api\RpcSkeleton\Application\Service\ItemAssembler;
 use Backend\Api\RpcSkeleton\Tests\Unit\Mock\Domain\EntityMockHelper;
 use Backend\Api\RpcSkeleton\Tests\Unit\Mock\Domain\ValueObjectMockHelper;
 use Backend\Api\RpcSkeleton\Tests\Unit\UnitTestCase;
+use Exception;
 
 /**
  * Test for class ItemAssembler.

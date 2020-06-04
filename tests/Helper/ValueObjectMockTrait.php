@@ -4,13 +4,6 @@ declare(strict_types=1);
 
 namespace Backend\Api\RpcSkeleton\Tests\Helper;
 
-use MicroModule\Base\Domain\ValueObject\ObjectStorage;
-use MicroModule\ValueObject\Identity\UUID as ValueObjectUUID;
-use MicroModule\ValueObject\Number\Integer as ValueObjectInteger;
-use MicroModule\ValueObject\Number\Natural;
-use MicroModule\ValueObject\StringLiteral\StringLiteral;
-use MicroModule\ValueObject\Structure\Collection;
-use DateTime;
 use Backend\Api\RpcSkeleton\Domain\Factory\ValueObjectFactory;
 use Backend\Api\RpcSkeleton\Domain\ValueObject\CreatedAt;
 use Backend\Api\RpcSkeleton\Domain\ValueObject\Id;
@@ -20,6 +13,13 @@ use Backend\Api\RpcSkeleton\Domain\ValueObject\ParentId;
 use Backend\Api\RpcSkeleton\Domain\ValueObject\Status;
 use Backend\Api\RpcSkeleton\Domain\ValueObject\UpdatedAt;
 use Backend\Api\RpcSkeleton\Domain\ValueObject\Url;
+use DateTime;
+use MicroModule\Base\Domain\ValueObject\ObjectStorage;
+use MicroModule\ValueObject\Identity\UUID as ValueObjectUUID;
+use MicroModule\ValueObject\Number\Integer as ValueObjectInteger;
+use MicroModule\ValueObject\Number\Natural;
+use MicroModule\ValueObject\StringLiteral\StringLiteral;
+use MicroModule\ValueObject\Structure\Collection;
 use Mockery;
 use Mockery\MockInterface;
 use Ramsey\Uuid\Uuid;

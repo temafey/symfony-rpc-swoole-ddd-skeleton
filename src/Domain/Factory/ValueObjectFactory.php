@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Backend\Api\RpcSkeleton\Domain\Factory;
 
-use MicroModule\ValueObject\DateTime\Exception\InvalidDateException;
-use Exception;
 use Backend\Api\RpcSkeleton\Domain\ValueObject\CreatedAt;
 use Backend\Api\RpcSkeleton\Domain\ValueObject\Id;
 use Backend\Api\RpcSkeleton\Domain\ValueObject\Item;
@@ -15,6 +13,8 @@ use Backend\Api\RpcSkeleton\Domain\ValueObject\Status;
 use Backend\Api\RpcSkeleton\Domain\ValueObject\UpdatedAt;
 use Backend\Api\RpcSkeleton\Domain\ValueObject\Url;
 use Backend\Api\RpcSkeleton\Domain\ValueObject\Uuid;
+use Exception;
+use MicroModule\ValueObject\DateTime\Exception\InvalidDateException;
 
 /**
  * Class ValueObjectFactory.

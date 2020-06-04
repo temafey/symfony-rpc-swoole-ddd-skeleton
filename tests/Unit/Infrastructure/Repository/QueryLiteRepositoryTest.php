@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Backend\Api\RpcSkeleton\Tests\Unit\Infrastructure\Repository;
 
-use Exception;
 use Backend\Api\RpcSkeleton\Infrastructure\Repository\QueryLiteRepository;
 use Backend\Api\RpcSkeleton\Tests\Unit\Mock\Domain\RepositoryMockHelper;
 use Backend\Api\RpcSkeleton\Tests\Unit\Mock\Domain\ValueObjectMockHelper;
 use Backend\Api\RpcSkeleton\Tests\Unit\UnitTestCase;
+use Exception;
 
 /**
  * Test for class QueryLiteRepository.

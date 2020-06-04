@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Backend\Api\RpcSkeleton\Tests\Unit\Application\CommandHandler;
 
 use Backend\Api\RpcSkeleton\Application\CommandHandler\ItemUpdateHandler;
-use Backend\Api\RpcSkeleton\Tests\Unit\Mock\Application\CommandMockHelper;
+use Backend\Api\RpcSkeleton\Tests\Unit\Mock\Domain\CommandMockHelper;
 use Backend\Api\RpcSkeleton\Tests\Unit\Mock\Domain\EntityMockHelper;
 use Backend\Api\RpcSkeleton\Tests\Unit\Mock\Domain\RepositoryMockHelper;
 use Backend\Api\RpcSkeleton\Tests\Unit\Mock\Domain\ValueObjectMockHelper;
@@ -31,7 +31,7 @@ class ItemUpdateHandlerTest extends UnitTestCase
      * @covers       \Backend\Api\RpcSkeleton\Application\CommandHandler\ItemUpdateHandler::__construct
      * @covers       \Backend\Api\RpcSkeleton\Application\CommandHandler\ItemUpdateHandler::handle
      *
-     * @dataProvider \Backend\Api\RpcSkeleton\Tests\Unit\DataProvider\ApplicationCommandHandler$1HandlerDataProvider::getDataForHandleMethod()
+     * @dataProvider \Backend\Api\RpcSkeleton\Tests\Unit\DataProvider\Application\CommandHandler\ItemUpdateHandlerDataProvider::getDataForHandleMethod()
      *
      * @param mixed[] $mockArgs
      * @param mixed[] $mockTimes

@@ -5,11 +5,11 @@ declare(strict_types=1);
 namespace Backend\Api\RpcSkeleton\Tests\Unit\Domain\Event;
 
 use Assert\AssertionFailedException;
-use Exception;
-use InvalidArgumentException;
 use Backend\Api\RpcSkeleton\Domain\Event\ItemWasUpdatedEvent;
 use Backend\Api\RpcSkeleton\Tests\Unit\Mock\Domain\ValueObjectMockHelper;
 use Backend\Api\RpcSkeleton\Tests\Unit\UnitTestCase;
+use Exception;
+use InvalidArgumentException;
 
 /**
  * Test for class ItemWasUpdatedEvent.
@@ -118,6 +118,7 @@ class ItemWasUpdatedEventTest extends UnitTestCase
      *
      * @param mixed[] $mockArgs
      * @param mixed[] $mockTimes
+     *
      * @throws Exception
      */
     public function serializeShouldReturnArrayTest(array $mockArgs, array $mockTimes): void

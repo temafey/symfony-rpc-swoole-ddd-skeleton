@@ -26,7 +26,7 @@ class EntityPreprocessor implements PreprocessorInterface
     /**
      * Validate is should method be tested.
      *
-     * @param ReflectionClass $reflectionClass
+     * @param ReflectionClass  $reflectionClass
      * @param ReflectionMethod $reflectionMethod
      *
      * @return bool
@@ -62,8 +62,8 @@ class EntityPreprocessor implements PreprocessorInterface
      * Exec preprocessor logic.
      *
      * @param ReflectionMethod $reflectionMethod
-     * @param string $testMethodName
-     * @param string|null $testMethodBody
+     * @param string           $testMethodName
+     * @param string|null      $testMethodBody
      *
      * @throws CodeExtractException
      * @throws FileNotExistsException
@@ -115,9 +115,9 @@ class EntityPreprocessor implements PreprocessorInterface
     }
 
     /**
-     * @param string[] $events
+     * @param string[]        $events
      * @param ReflectionClass $reflectionClass
-     * @param string $testMethodName
+     * @param string          $testMethodName
      *
      * @return string
      *

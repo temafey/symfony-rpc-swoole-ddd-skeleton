@@ -4,21 +4,21 @@ declare(strict_types=1);
 
 namespace Backend\Api\RpcSkeleton\Tests\Integration\Domain\Command;
 
-use MicroModule\ValueObject\Identity\UUID as ProcessUuid;
-use Broadway\Domain\DomainMessage;
-use Enqueue\Client\TraceableProducer;
-use Backend\Api\RpcSkeleton\Application\CommandHandler\ItemAddIdCommand;
-use Backend\Api\RpcSkeleton\Application\CommandHandler\ItemCreateCommand;
-use Backend\Api\RpcSkeleton\Application\CommandHandler\ItemCreateTaskCommand;
-use Backend\Api\RpcSkeleton\Application\CommandHandler\ItemDeleteCommand;
-use Backend\Api\RpcSkeleton\Application\CommandHandler\ItemDeleteTaskCommand;
-use Backend\Api\RpcSkeleton\Application\CommandHandler\ItemUpdateCommand;
-use Backend\Api\RpcSkeleton\Application\CommandHandler\ItemUpdateTaskCommand;
-use Backend\Api\RpcSkeleton\Domain\Factory\CommandFactory;
+use Backend\Api\RpcSkeleton\Application\Factory\CommandFactory;
+use Backend\Api\RpcSkeleton\Domain\Command\ItemAddIdCommand;
+use Backend\Api\RpcSkeleton\Domain\Command\ItemCreateCommand;
+use Backend\Api\RpcSkeleton\Domain\Command\ItemCreateTaskCommand;
+use Backend\Api\RpcSkeleton\Domain\Command\ItemDeleteCommand;
+use Backend\Api\RpcSkeleton\Domain\Command\ItemDeleteTaskCommand;
+use Backend\Api\RpcSkeleton\Domain\Command\ItemUpdateCommand;
+use Backend\Api\RpcSkeleton\Domain\Command\ItemUpdateTaskCommand;
 use Backend\Api\RpcSkeleton\Domain\Event\ItemEvent;
 use Backend\Api\RpcSkeleton\Domain\ValueObject\Id;
 use Backend\Api\RpcSkeleton\Domain\ValueObject\Uuid;
-use Backend\Api\RpcSkeleton\Tests\Integration\Application\ApplicationTestCase;
+use Backend\Api\RpcSkeleton\Tests\Integration\ApplicationTestCase;
+use Broadway\Domain\DomainMessage;
+use Enqueue\Client\TraceableProducer;
+use MicroModule\ValueObject\Identity\UUID as ProcessUuid;
 
 /**
  * Class CommandTestCase.

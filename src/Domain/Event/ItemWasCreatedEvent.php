@@ -6,11 +6,11 @@ declare(strict_types=1);
 
 namespace Backend\Api\RpcSkeleton\Domain\Event;
 
-use MicroModule\ValueObject\Identity\UUID as ProcessUuid;
 use Assert\Assertion;
 use Assert\AssertionFailedException;
 use Backend\Api\RpcSkeleton\Domain\ValueObject\Item;
 use Backend\Api\RpcSkeleton\Domain\ValueObject\Uuid;
+use MicroModule\ValueObject\Identity\UUID as ProcessUuid;
 
 /**
  * Class ItemWasCreatedEvent.
@@ -18,7 +18,7 @@ use Backend\Api\RpcSkeleton\Domain\ValueObject\Uuid;
  * @category Domain\Event
  * @sub-package Item
  */
-class ItemWasCreatedEvent extends ItemEvent
+final class ItemWasCreatedEvent extends ItemEvent
 {
     /**
      * Item ValueObject.
@@ -56,7 +56,7 @@ class ItemWasCreatedEvent extends ItemEvent
      *
      * @param mixed[] $data
      *
-     * @return ItemEvent
+     * @return static
      *
      * @throws AssertionFailedException
      *
@@ -69,7 +69,7 @@ class ItemWasCreatedEvent extends ItemEvent
         Assertion::keyExists($data, 'uuid');
         Assertion::keyExists($data, 'item');
 
-        return new self(
+        return new static(
             ProcessUuid::fromNative($data['process_uuid']),
             Uuid::fromNative($data['uuid']),
             Item::fromNative($data['item'])

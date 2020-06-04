@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Backend\Api\RpcSkeleton\Application\QueryHandler;
 
-use Backend\Api\RpcSkeleton\Domain\Query\FetchOneCommand;
-use Exception;
-use Backend\Api\RpcSkeleton\Application\Service\ItemAssembler;
 use Backend\Api\RpcSkeleton\Application\Dto\ItemDto;
+use Backend\Api\RpcSkeleton\Application\Service\ItemAssembler;
+use Backend\Api\RpcSkeleton\Domain\Query\FetchOneCommand;
 use Backend\Api\RpcSkeleton\Domain\Repository\QueryRepositoryInterface;
+use Exception;
 
 /**
  * Class FetchOneHandler.

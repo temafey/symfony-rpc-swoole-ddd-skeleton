@@ -4,6 +4,11 @@ includes:
 	- vendor/phpstan/phpstan-symfony/extension.neon
 
 parameters:
+	parallel:
+	    jobSize: 20
+	    maximumNumberOfProcesses: 32
+	    minimumNumberOfJobsPerProcess: 2
+	    processTimeout: 100.0
 	checkGenericClassInNonGenericObjectType: false
 	checkMissingIterableValueType: false
 	excludes_analyse:
@@ -13,21 +18,12 @@ parameters:
 		- /app/tests/Unit/Mock/*
 	ignoreErrors:
 	    - '#Unsafe usage of new static\(\).#'
-	    - '#Parameter .* expects .*\\ValueObjectInterface given\.#'
-	    - '#Parameter .* expects MasterData\\Api\\RpcSkeleton\\Domain\\ValueObject\\.*, MicroModule\\ValueObject\\.* given\.#'
-	    - '#Method MasterData\\Api\\RpcSkeleton\\Domain\\Factory\\ValueObjectFactory.* should return MasterData\\Api\\RpcSkeleton\\Domain\\ValueObject\\.* but returns MicroModule\\ValueObject\\.*#'
-	    - '#Method .*::deserialize\(\) should return \$this\(.*\) but returns static\(.*\)\.#'
 	    - '#Strict comparison using === between 1 and float will always evaluate to false.#'
-	    - '#Call to an undefined method MasterData\\Api\\RpcSkeleton\\Domain\\Event\\ItemEvent::getId\(\).#'
 	    - '#Method.*create.*ValueObject.*Mock\(\) should return.*Mockery\\MockInterface but returns Mockery\\MockInterface.#'
-#	    - '#Method.*create.*Mock\(\).*return.*\&Mockery\\MockInterface.#'
-#	    - '#Call to an undefined method MasterData\\Api\\RpcSkeleton\\Tests\\Unit.*Test\:\:create.*Mock\(\).#'
-#	    - '#Method MasterData\\Api\\RpcSkeleton\\Tests\\Unit.*create.*Mock\(\) with return type void returns mixed but should not return anything\.#'
-#	    - '#PHPDoc tag \@return contains unresolvable type.#'
 	    - '#Parameter .* expects .*Mockery\\MockInterface.* given\.#'
-	    - '#Method MasterData\\Api\\RpcSkeleton\\Tests\\.* should return .* but returns Mockery\\MockInterface.*#'
+	    - '#Parameter .* method Backend\\Api\\RpcSkeleton\\Domain\\ValueObject\\.* expects Backend\\Api\\RpcSkeleton\\Domain\\ValueObject\\.*, MicroModule\\ValueObject\\.* given.#'
+	    - '#Method Backend\\Api\\RpcSkeleton\\Domain\\Factory\\ValueObjectFactory.* should return Backend\\Api\\RpcSkeleton\\Domain\\ValueObject.* but returns MicroModule\\ValueObject\\.*#'
+	    - '#Parameter .* Backend\\Api\\RpcSkeleton\\.* constructor expects Backend\\Api\\RpcSkeleton\\Domain\\ValueObject\\.*, MicroModule\\ValueObject\\.* given\.#'
+	    - '#Method Backend\\Api\\RpcSkeleton\\Tests\\.* should return .* but returns Mockery\\MockInterface\.#'
+	    - '#Return typehint of method Backend\\Api\\RpcSkeleton\\Tests\\Integration\\ApplicationTestCase.* has invalid type MicroModule\\Base\\Domain\\ValueObject\\ObjectStorage\.#'
 
-#	    - '#Call to an undefined method Mockery\\MockInterface.*#'
-#	    - '#Call to an undefined method Mockery\\Expectation::shouldReceive#'
-#	    - '#PHPDoc tag \@param for parameter \$.*Mock contains unresolvable type\.#'
-#	    - '#Call to static method PHPUnit\\Framework\\Assert\:\:assertInstanceOf\(\) with .* and .*ProgramWasNotUpdatedEvent will always evaluate to false.#'

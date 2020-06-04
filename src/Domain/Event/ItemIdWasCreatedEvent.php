@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Backend\Api\RpcSkeleton\Domain\Event;
 
-use MicroModule\ValueObject\Identity\UUID as ProcessUuid;
 use Assert\Assertion;
 use Assert\AssertionFailedException;
-use Exception;
 use Backend\Api\RpcSkeleton\Domain\ValueObject\Id;
 use Backend\Api\RpcSkeleton\Domain\ValueObject\Uuid;
+use Exception;
+use MicroModule\ValueObject\Identity\UUID as ProcessUuid;
 
 /**
  * Class ItemIdWasCreatedEvent.
@@ -55,7 +55,7 @@ class ItemIdWasCreatedEvent extends ItemEvent
      *
      * @param mixed[] $data
      *
-     * @return ItemEvent
+     * @return static
      *
      * @throws AssertionFailedException
      * @throws Exception

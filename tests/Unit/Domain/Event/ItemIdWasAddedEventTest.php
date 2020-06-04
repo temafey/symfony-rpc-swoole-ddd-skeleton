@@ -5,10 +5,10 @@ declare(strict_types=1);
 namespace Backend\Api\RpcSkeleton\Tests\Unit\Domain\Event;
 
 use Assert\AssertionFailedException;
-use InvalidArgumentException;
 use Backend\Api\RpcSkeleton\Domain\Event\ItemIdWasAddedEvent;
 use Backend\Api\RpcSkeleton\Tests\Unit\Mock\Domain\ValueObjectMockHelper;
 use Backend\Api\RpcSkeleton\Tests\Unit\UnitTestCase;
+use InvalidArgumentException;
 
 /**
  * Test for class ItemIdWasAddedEvent.
@@ -95,7 +95,7 @@ class ItemIdWasAddedEventTest extends UnitTestCase
     public function eventShouldFailWhenDeserializeWithWrongDataTest(array $mockArgs): void
     {
         $data = [
-            'process_uuid' => (string)$mockArgs['Id']['toNative'],
+            'process_uuid' => (string) $mockArgs['Id']['toNative'],
             'uuid' => $mockArgs['Uuid']['toNative'],
             'id' => $mockArgs['UUID']['toNative'],
         ];

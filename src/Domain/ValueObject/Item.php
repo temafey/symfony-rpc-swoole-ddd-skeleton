@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace Backend\Api\RpcSkeleton\Domain\ValueObject;
 
-use MicroModule\ValueObject\DateTime\Exception\InvalidDateException;
-use MicroModule\ValueObject\ValueObjectInterface;
+use Backend\Api\RpcSkeleton\Domain\Exception\ValueObjectInvalidException;
+use Backend\Api\RpcSkeleton\Domain\Exception\ValueObjectInvalidNativeValueException;
 use Broadway\Serializer\Serializable;
 use DateTime;
 use Exception;
-use Backend\Api\RpcSkeleton\Domain\Exception\ValueObjectInvalidException;
-use Backend\Api\RpcSkeleton\Domain\Exception\ValueObjectInvalidNativeValueException;
+use MicroModule\ValueObject\DateTime\Exception\InvalidDateException;
+use MicroModule\ValueObject\ValueObjectInterface;
 
 /**
  * Class Item.

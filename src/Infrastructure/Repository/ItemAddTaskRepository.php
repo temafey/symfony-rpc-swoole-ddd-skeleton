@@ -4,15 +4,15 @@ declare(strict_types=1);
 
 namespace Backend\Api\RpcSkeleton\Infrastructure\Repository;
 
-use MicroModule\Base\Utils\LoggerTrait;
-use MicroModule\Task\Application\Processor\JobCommandBusProcessor;
-use MicroModule\ValueObject\Identity\UUID as ProcessUuid;
-use Enqueue\Client\ProducerInterface;
-use Exception;
-use Backend\Api\RpcSkeleton\Domain\Factory\CommandFactory;
+use Backend\Api\RpcSkeleton\Application\Factory\CommandFactory;
 use Backend\Api\RpcSkeleton\Domain\Repository\ItemTaskRepositoryInterface;
 use Backend\Api\RpcSkeleton\Domain\ValueObject\Item;
 use Backend\Api\RpcSkeleton\Domain\ValueObject\Uuid;
+use Enqueue\Client\ProducerInterface;
+use Exception;
+use MicroModule\Base\Utils\LoggerTrait;
+use MicroModule\Task\Application\Processor\JobCommandBusProcessor;
+use MicroModule\ValueObject\Identity\UUID as ProcessUuid;
 
 /**
  * Class ItemAddTaskRepository.

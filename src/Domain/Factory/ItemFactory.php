@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Backend\Api\RpcSkeleton\Domain\Factory;
 
-use MicroModule\ValueObject\Identity\UUID as ProcessUuid;
 use Backend\Api\RpcSkeleton\Domain\Entity\ItemEntity;
 use Backend\Api\RpcSkeleton\Domain\Exception\ValueObjectInvalidException;
 use Backend\Api\RpcSkeleton\Domain\ValueObject\Item as ItemValueObject;
 use Backend\Api\RpcSkeleton\Domain\ValueObject\Uuid;
+use MicroModule\ValueObject\Identity\UUID as ProcessUuid;
 
 /**
  * Class ItemFactory.

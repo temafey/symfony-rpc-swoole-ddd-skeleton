@@ -12,33 +12,33 @@ services:
     public: false
     arguments:
       - '@tactician.commandbus.command.create.item'
-      - '@Backend\Api\RpcSkeleton\Domain\Factory\CommandFactory'
+      - '@Backend\Api\RpcSkeleton\Application\Factory\CommandFactory'
     tags: [{ method: 'add', name: 'json_rpc_http_server.jsonrpc_method' }]
 
   Backend\Api\RpcSkeleton\Presentation\Rpc\UpdateMethod:
     public: false
     arguments:
       - '@tactician.commandbus.command.create.item'
-      - '@Backend\Api\RpcSkeleton\Domain\Factory\CommandFactory'
+      - '@Backend\Api\RpcSkeleton\Application\Factory\CommandFactory'
     tags: [{ method: 'update', name: 'json_rpc_http_server.jsonrpc_method' }]
 
   Backend\Api\RpcSkeleton\Presentation\Rpc\DeleteMethod:
     public: false
     arguments:
       - '@tactician.commandbus.command.create.item'
-      - '@Backend\Api\RpcSkeleton\Domain\Factory\CommandFactory'
+      - '@Backend\Api\RpcSkeleton\Application\Factory\CommandFactory'
     tags: [{ method: 'delete', name: 'json_rpc_http_server.jsonrpc_method' }]
 
   Backend\Api\RpcSkeleton\Presentation\Rpc\FetchMethod:
     public: false
     arguments:
       - '@tactician.commandbus.command.query.item'
-      - '@Backend\Api\RpcSkeleton\Domain\Factory\CommandFactory'
+      - '@Backend\Api\RpcSkeleton\Application\Factory\CommandFactory'
     tags: [{ method: 'fetch', name: 'json_rpc_http_server.jsonrpc_method' }]
 
   Backend\Api\RpcSkeleton\Presentation\Rpc\FindMethod:
     public: false
     arguments:
       - '@tactician.commandbus.command.query.item'
-      - '@Backend\Api\RpcSkeleton\Domain\Factory\CommandFactory'
+      - '@Backend\Api\RpcSkeleton\Application\Factory\CommandFactory'
     tags: [{ method: 'find', name: 'json_rpc_http_server.jsonrpc_method' }]

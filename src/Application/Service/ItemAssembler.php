@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Backend\Api\RpcSkeleton\Application\Service;
 
-use Exception;
 use Backend\Api\RpcSkeleton\Application\Dto\ItemDto;
 use Backend\Api\RpcSkeleton\Domain\Entity\ItemEntity;
+use Exception;
 
 /**
  * Class ItemAssembler.

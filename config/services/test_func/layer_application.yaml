@@ -5,5 +5,5 @@ services:
     public: true
 
 
-  Backend\Api\RpcSkeleton\Domain\Factory\CommandFactory:
+  Backend\Api\RpcSkeleton\Application\Factory\CommandFactory:
     public: true

@@ -4,26 +4,26 @@ declare(strict_types=1);
 
 namespace Backend\Api\RpcSkeleton\Tests\Integration\Domain\Command;
 
-use MicroModule\Task\Application\Processor\JobCommandBusProcessor;
+use Backend\Api\RpcSkeleton\Application\Factory\CommandFactory;
 use Exception;
-use Backend\Api\RpcSkeleton\Domain\Factory\CommandFactory;
+use MicroModule\Task\Application\Processor\JobCommandBusProcessor;
 
 /**
- * Class ItemUpdateTaskHandlerTest.
+ * Class ItemCreateTaskHandlerTest.
  *
  * @category Tests\Integration\Domain\Command\Program\Status
  */
-class ItemUpdateTaskHandlerTest extends CommandTestCase
+class ItemCreateTaskHandlerTest extends CommandTestCase
 {
     /**
      * @test
      *
      * @group integration
      *
-     * @covers       \Backend\Api\RpcSkeleton\Application\CommandHandler\ItemUpdateTaskHandler::handle
-     * @covers       \Backend\Api\RpcSkeleton\Application\CommandHandler\ItemUpdateTaskHandler::__construct
+     * @covers       \Backend\Api\RpcSkeleton\Application\CommandHandler\ItemCreateTaskHandler::handle
+     * @covers       \Backend\Api\RpcSkeleton\Application\CommandHandler\ItemCreateTaskHandler::__construct
      *
-     * @dataProvider \Backend\Api\RpcSkeleton\Tests\DataProvider\ItemDataProvider::getUpdateItems()
+     * @dataProvider \Backend\Api\RpcSkeleton\Tests\DataProvider\ItemDataProvider::getItems()
      *
      * @param string      $processUuid
      * @param string      $uuid
@@ -37,7 +37,7 @@ class ItemUpdateTaskHandlerTest extends CommandTestCase
      *
      * @throws Exception
      */
-    public function ItemUpdateTaskCommandShouldFireUpdateItemJobToRepositoryTest(
+    public function ItemCreateTaskCommandShouldFireCreateItemJobToRepositoryTest(
         string $processUuid,
         string $uuid,
         int $id,
@@ -61,16 +61,14 @@ class ItemUpdateTaskHandlerTest extends CommandTestCase
         ];
         $times = [
             'processUuid' => ['toNative' => 1, 'getUuid' => 0, 'toString' => 0],
-            'uuid' => ['toNative' => 1, 'getUuid' => 0, 'toString' => 0],
             'item' => $itemTimes,
         ];
-        $this->handleItemUpdateTaskCommand($processUuid, $uuid, $item, $times);
+        $this->handleItemCreateTaskCommand($processUuid, $item, $times);
 
         $queueTraces = $this->getProducer()->getCommandTraces(JobCommandBusProcessor::getRoute());
         self::assertCount(1, $queueTraces);
-        self::assertEquals(CommandFactory::PROGRAM_READ_MODEL_UPDATE_COMMAND, $queueTraces[0]['body']['type']);
+        self::assertEquals(CommandFactory::PROGRAM_READ_MODEL_CREATE_COMMAND, $queueTraces[0]['body']['type']);
         self::assertEquals($processUuid, $queueTraces[0]['body']['args'][0]);
-        self::assertEquals($uuid, $queueTraces[0]['body']['args'][1]);
-        self::assertEquals($item, $queueTraces[0]['body']['args'][2]);
+        self::assertEquals($item, $queueTraces[0]['body']['args'][1]);
     }
 }

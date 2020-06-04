@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Backend\Api\RpcSkeleton\Tests\Unit\Domain\Factory;
 
-use MicroModule\ValueObject\DateTime\Exception\InvalidDateException;
-use Exception;
 use Backend\Api\RpcSkeleton\Domain\Factory\ValueObjectFactory;
 use Backend\Api\RpcSkeleton\Domain\ValueObject\CreatedAt;
 use Backend\Api\RpcSkeleton\Domain\ValueObject\Id;
@@ -17,6 +15,8 @@ use Backend\Api\RpcSkeleton\Domain\ValueObject\UpdatedAt;
 use Backend\Api\RpcSkeleton\Domain\ValueObject\Url;
 use Backend\Api\RpcSkeleton\Domain\ValueObject\Uuid;
 use Backend\Api\RpcSkeleton\Tests\Unit\UnitTestCase;
+use Exception;
+use MicroModule\ValueObject\DateTime\Exception\InvalidDateException;
 
 /**
  * Test for class ValueObjectFactory.
@@ -81,6 +81,7 @@ class ValueObjectFactoryTest extends UnitTestCase
      * @dataProvider \Backend\Api\RpcSkeleton\Tests\Unit\DataProvider\Domain\Factory\ValueObjectFactoryDataProvider::getDataForMakeUuidMethod()
      *
      * @param mixed[] $mockArgs
+     *
      * @throws Exception
      */
     public function makeUuidShouldReturnUuidTest(array $mockArgs): void

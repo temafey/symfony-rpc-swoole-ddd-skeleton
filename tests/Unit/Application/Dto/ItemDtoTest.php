@@ -23,7 +23,7 @@ class ItemDtoTest extends UnitTestCase
      *
      * @covers       \Backend\Api\RpcSkeleton\Application\Dto\ItemDto::denormalize
      *
-     * @dataProvider \Backend\Api\RpcSkeleton\Tests\Unit\DataProvider\Domain\Dto\ItemDtoDataProvider::getData()
+     * @dataProvider \Backend\Api\RpcSkeleton\Tests\Unit\DataProvider\Application\Dto\ItemDtoDataProvider::getData()
      *
      * @param mixed[] $mockArgs
      */
@@ -52,7 +52,7 @@ class ItemDtoTest extends UnitTestCase
      *
      * @covers       \Backend\Api\RpcSkeleton\Application\Dto\ItemDto::normalize
      *
-     * @dataProvider \Backend\Api\RpcSkeleton\Tests\Unit\DataProvider\Domain\Dto\ItemDtoDataProvider::getData()
+     * @dataProvider \Backend\Api\RpcSkeleton\Tests\Unit\DataProvider\Application\Dto\ItemDtoDataProvider::getData()
      *
      * @param mixed[] $mockArgs
      */

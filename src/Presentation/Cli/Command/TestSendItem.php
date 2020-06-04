@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Backend\Api\RpcSkeleton\Presentation\Cli\Command;
 
+use Backend\Api\RpcSkeleton\Infrastructure\Repository\ItemAddTaskRepository;
 use Enqueue\Client\ProducerInterface;
 use Exception;
-use Backend\Api\RpcSkeleton\Infrastructure\Repository\ItemAddTaskRepository;
 use RuntimeException;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;

@@ -6,7 +6,9 @@ require dirname(__DIR__).'/vendor/autoload.php';
 
 // Load cached env vars if the .env.local.php file exists
 // Run "composer dump-env prod" to create it (requires symfony/flex >=1.2)
-if (is_array($env = @include dirname(__DIR__).'/.env.local.php')) {
+$evnLocal = dirname(__DIR__).'/.env.local.php';
+
+if (file_exists($evnLocal) && is_array($env = include $evnLocal)) {
     $_SERVER += $env;
     $_ENV += $env;
 } elseif (!class_exists(Dotenv::class)) {

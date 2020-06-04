@@ -209,7 +209,7 @@ class ItemEventSourcingStoreRepositoryDataProvider
                         ],
                         'initializeState' => 'Mississippi',
                         'getPlayhead' => 3,
-                        'className' => 'MasterData\\Api\\RpcSkeleton\\Domain\\Entity\\ItemEntity',
+                        'className' => 'Backend\\\Api\\RpcSkeleton\\Domain\\Entity\\ItemEntity',
                     ],
                 ],
                 1 => [
